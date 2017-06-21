@@ -11,7 +11,7 @@ ${Login.Username.Text}                  id=userName
 ${Login.Password.Text}                  id=password
 ${Login.Button}                         //*[@class="ant-btn ant-btn-primary ant-btn-lg login-form-button"]
 ${Agency.Username}                      testagency
-${Employer.Username}                    testemployer
+${Employer.Username}                    employee_FigNGyOm
 ${Register.Link}                        //*[@href="/Register"]
 
 
@@ -173,9 +173,31 @@ ${Testimonials.Table.Action}                            //tbody[@class="ant-tabl
 
 
 
-
-
-
+#PROFILE PREVIEW
+${Profile.Preview.Logo}                                 //*[@class="profile-image"]
+${Profile.Preview.Company.Name.Label}                   //div[@class="ant-col-19 profile-info"]/p[1]
+${Profile.Preview.Address1.Label}                       //div[@class="ant-col-19 profile-info"]/p[2]
+${Profile.Preview.Address2.Label}                       //div[@class="ant-col-19 profile-info"]/p[3]
+${Profile.Preview.Email.Label}                          //div[@class="ant-col-19 profile-info"]/p[4]
+${Profile.Preview.Phone.Label}                          //div[@class="ant-col-19 profile-info"]/p[5]
+${Profile.Preview.Fax.Label}                            //div[@class="ant-col-19 profile-info"]/p[6]
+${Profile.Preview.AboutUs.Region.Label}                 //div[@class="ant-col-8 address"][1]//h3[@class="ant-card-head-title"]
+${Profile.Preview.AboutUs.Correspondence.Label}         //div[@class="ant-col-8 address"][2]//h3[@class="ant-card-head-title"]
+${Profile.Preview.AboutUs.Region.Address.Label}         //div[@class="ant-col-8 address"][1]//div[@class="ant-card-body"]/p/span
+${Profile.Preview.AboutUs.Region.Email.Label}           //div[@class="ant-col-8 address"][1]//div[@class="ant-card-body"]/p[2]
+${Profile.Preview.AboutUs.Region.Phone.Label}           //div[@class="ant-col-8 address"][1]//div[@class="ant-card-body"]/p[3]
+${Profile.Preview.AboutUs.Correspondence.Address.Label}         //div[@class="ant-col-8 address"][2]//div[@class="ant-card-body"]/p/span
+${Profile.Preview.AboutUs.Correspondence.Email.Label}           //div[@class="ant-col-8 address"][2]//div[@class="ant-card-body"]/p[2]
+${Profile.Preview.AboutUs.Correspondence.Phone.Label}           //div[@class="ant-col-8 address"][2]//div[@class="ant-card-body"]/p[3]
+${Profile.Preview.Region.Row1}                          //div[@class="ant-row region-industry"]/div[1]/p
+${Profile.Preview.Region.Row2}                          //div[@class="ant-row region-industry"]/div[1]/ul/li[1]
+${Profile.Preview.Region.Row3}                          //div[@class="ant-row region-industry"]/div[1]/ul/li[2]
+${Profile.Preview.Industry.Row1}                        //div[@class="ant-row region-industry"]/div[2]/p
+${Profile.Preview.Industry.Row2}                        //div[@class="ant-row region-industry"]/div[2]/ul/li[1]
+${Profile.Preview.Industry.Row3}                        //div[@class="ant-row region-industry"]/div[2]/ul/li[2]
+${Profile.Preview.ProjSupp.Label}                       //div[@class="ant-row project"]/div/div
+${Profile.Preview.ProjSupp.Add.Label}                   //div[@class="ant-row project"]/div/div[2]
+${Profile.Preview.Testimonial.Label}                    //div[@class="ant-row testimony"]/div[2]/p[2]
 
 *** Keywords ***
 Login To UBIDY
