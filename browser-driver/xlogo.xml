@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170608 15:30:21.593" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\Source\Repos\Ubidy_EmployerAutomationSuite\testsuites\Profile\Details.robot" id="s1" name="Details">
+<test id="s1-t1" name="Profile Details - Add logo">
+<kw name="Login To UBIDY" library="Ubidy.Pages">
+<kw name="Open" library="Ubidy.Browser">
+<kw name="Set Environment Variable" library="OperatingSystem">
+<doc>Sets an environment variable to a specified value.</doc>
+<arguments>
+<arg>no_proxy</arg>
+<arg>127.0.0.1</arg>
+</arguments>
+<msg timestamp="20170608 15:30:21.718" level="INFO">Environment variable 'no_proxy' set to value '127.0.0.1'.</msg>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/</arg>
+</arguments>
+<msg timestamp="20170608 15:30:21.718" level="INFO">Environment variable 'PATH' set to value 'C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Users\Jeffrey Givera\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Jeffrey Givera\AppData\Roaming\npm;C:\Python27\;C:\Python27\Scripts\;D:\Source\Repos\Ubidy_AutomationSuite\browser-driver\;D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/'.</msg>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="OpenChrome" library="Ubidy.Browser">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome options}</var>
+</assign>
+<msg timestamp="20170608 15:30:21.718" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0360C6D0&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>disable-component-extensions-with-background-pages</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>start-maximized</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>disable-extensions</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>disable-infobars</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:21.718" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome options}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:21.718" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" endtime="20170608 15:30:25.109" starttime="20170608 15:30:21.718"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:25.109" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets Selenium 2's default implicit wait in seconds and</doc>
+<arguments>
+<arg>${Selenium.Timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:25.111" starttime="20170608 15:30:25.109"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${Selenium.Timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:25.114" starttime="20170608 15:30:25.112"></status>
+</kw>
+<kw name="Init UBIDY" library="Ubidy.Browser">
+<kw name="Delete All Cookies" library="Selenium2Library">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" endtime="20170608 15:30:25.765" starttime="20170608 15:30:25.115"></status>
+</kw>
+<kw name="Go To UBIDY" library="Ubidy.Browser">
+<kw name="Get Location" library="Selenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${Current.Location}</var>
+</assign>
+<msg timestamp="20170608 15:30:25.781" level="INFO">${Current.Location} = data:,</msg>
+<status status="PASS" endtime="20170608 15:30:25.781" starttime="20170608 15:30:25.765"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${Current.Location}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:25.781" level="INFO">data:,</msg>
+<status status="PASS" endtime="20170608 15:30:25.781" starttime="20170608 15:30:25.781"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:25.781" level="INFO">employer</msg>
+<status status="PASS" endtime="20170608 15:30:25.781" starttime="20170608 15:30:25.781"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${USER}'=='employer'</arg>
+<arg>Selenium2Library.Go To</arg>
+<arg>${Employer.Url}</arg>
+</arguments>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${Employer.Url}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:25.781" level="INFO">Opening url 'http://employerdev.ubidywebsite.com:8081'</msg>
+<status status="PASS" endtime="20170608 15:30:27.766" starttime="20170608 15:30:25.781"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:27.766" starttime="20170608 15:30:25.781"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${USER}'=='agency'</arg>
+<arg>Selenium2Library.Go To</arg>
+<arg>${Agency.Url}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:27.768" starttime="20170608 15:30:27.767"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:27.768" starttime="20170608 15:30:25.765"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:27.769" starttime="20170608 15:30:27.768"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:28.228" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:28.229" starttime="20170608 15:30:27.770"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:28.229" starttime="20170608 15:30:25.114"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:28.229" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${USER}'=='employer'</arg>
+<arg>Input Text</arg>
+<arg>${Login.Username.Text}</arg>
+<arg>${Employer.Username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Login.Username.Text}</arg>
+<arg>${Employer.Username}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:28.232" level="INFO">Typing text 'testemployer' into text field 'id=userName'</msg>
+<status status="PASS" endtime="20170608 15:30:28.781" starttime="20170608 15:30:28.231"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:28.781" starttime="20170608 15:30:28.230"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${USER}'=='agency'</arg>
+<arg>Input Text</arg>
+<arg>${Login.Username.Text}</arg>
+<arg>${Agency.Username}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:28.783" starttime="20170608 15:30:28.782"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Login.Password.Text}</arg>
+<arg>ubidy123</arg>
+</arguments>
+<msg timestamp="20170608 15:30:28.784" level="INFO">Typing password into text field 'id=password'</msg>
+<status status="PASS" endtime="20170608 15:30:29.294" starttime="20170608 15:30:28.783"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:29.672" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:29.672" starttime="20170608 15:30:29.295"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Login.Button}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:29.673" level="INFO">Clicking element '//*[@class="ant-btn ant-btn-primary ant-btn-lg login-form-button"]'.</msg>
+<status status="PASS" endtime="20170608 15:30:29.978" starttime="20170608 15:30:29.673"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:29.978" starttime="20170608 15:30:21.718"></status>
+</kw>
+<kw name="Add logo">
+<tags>
+<tag>UB-41</tag>
+</tags>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Menu.Profile.Link}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:29.980" level="INFO">Clicking element '//*[@href="/profile"]'.</msg>
+<status status="PASS" endtime="20170608 15:30:31.813" starttime="20170608 15:30:29.979"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Company.Logo.Button}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:32.078" starttime="20170608 15:30:31.813"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:32.457" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:32.458" starttime="20170608 15:30:32.078"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>${Company.Logo.Button}@src</arg>
+</arguments>
+<assign>
+<var>${att}</var>
+</assign>
+<msg timestamp="20170608 15:30:32.695" level="INFO">${att} = None</msg>
+<status status="PASS" endtime="20170608 15:30:32.695" starttime="20170608 15:30:32.458"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${att}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:32.697" starttime="20170608 15:30:32.696"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Profile.Edit.Button}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:32.699" level="INFO">Clicking element '//*[@class="ant-btn ant-btn-default login-form-button"]'.</msg>
+<status status="PASS" endtime="20170608 15:30:33.003" starttime="20170608 15:30:32.698"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Company.Logo.Button}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:33.004" level="INFO">Clicking element '//*[@alt="Company Logo"]'.</msg>
+<status status="PASS" endtime="20170608 15:30:33.300" starttime="20170608 15:30:33.004"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Profile.Logo1.Image}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:34.412" starttime="20170608 15:30:33.300"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:34.816" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:34.817" starttime="20170608 15:30:34.413"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the `file_path` into file input field found by `locator`.</doc>
+<arguments>
+<arg>${Profile.Logo.Input}</arg>
+<arg>D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/logo.jpg</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:35.086" starttime="20170608 15:30:34.817"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Profile.Logo1.Image}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:35.326" starttime="20170608 15:30:35.086"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Profile.Logo.CurrentImage}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:35.595" starttime="20170608 15:30:35.326"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:35.986" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:35.986" starttime="20170608 15:30:35.595"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Profile.Logo.Popup.Select.Button}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:35.987" level="INFO">Clicking element '//*[@class="ant-btn ant-btn-primary ant-btn-lg"]'.</msg>
+<status status="PASS" endtime="20170608 15:30:36.295" starttime="20170608 15:30:35.987"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Company.Logo.Button}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:36.943" starttime="20170608 15:30:36.295"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 15:30:37.319" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 15:30:37.320" starttime="20170608 15:30:36.943"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>${Company.Logo.Button}@src</arg>
+</arguments>
+<assign>
+<var>${att}</var>
+</assign>
+<msg timestamp="20170608 15:30:37.539" level="INFO">${att} = http://ubidy.blob.core.windows.net/employer-profilepicture/f5941e1c-ec6c-41eb-8e21-f1558a60192d.jpg</msg>
+<status status="PASS" endtime="20170608 15:30:37.539" starttime="20170608 15:30:37.320"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${att}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:37.540" starttime="20170608 15:30:37.539"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${att}</arg>
+</arguments>
+<msg timestamp="20170608 15:30:37.541" level="INFO">Length is 99</msg>
+<status status="PASS" endtime="20170608 15:30:37.541" starttime="20170608 15:30:37.541"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>${Company.Logo.Button}@style</arg>
+</arguments>
+<assign>
+<var>${att}</var>
+</assign>
+<msg timestamp="20170608 15:30:37.768" level="INFO">${att} = max-width: 150px;</msg>
+<status status="PASS" endtime="20170608 15:30:37.768" starttime="20170608 15:30:37.541"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${att}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:37.770" starttime="20170608 15:30:37.768"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${att}</arg>
+<arg>max-width: 150px;</arg>
+</arguments>
+<status status="PASS" endtime="20170608 15:30:37.771" starttime="20170608 15:30:37.770"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:37.771" starttime="20170608 15:30:29.979"></status>
+</kw>
+<tags>
+<tag>UB-41</tag>
+</tags>
+<status status="PASS" endtime="20170608 15:30:37.773" critical="yes" starttime="20170608 15:30:21.718"></status>
+</test>
+<kw type="teardown" name="Close" library="Ubidy.Browser">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 15:30:39.982" starttime="20170608 15:30:37.778"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:39.982" starttime="20170608 15:30:37.778"></status>
+</kw>
+<status status="PASS" endtime="20170608 15:30:39.982" starttime="20170608 15:30:21.593"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">UB-41</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Details" pass="1">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
