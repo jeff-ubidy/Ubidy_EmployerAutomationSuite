@@ -298,6 +298,9 @@ ${Talent.Request.Create.TR.Modal.PrefOrigin}            //*[@id="talent-requestF
 ${Talent.Request.Create.TR.Modal.ExpLevel}              //*[@id="talent-requestForm"]/form/div[2]/div[3]/div[3]/div[2]//div[@class="ant-select-selection__rendered"]
 ${Talent.Request.Create.TR.Modal.Currency}              //*[@id="talent-requestForm"]/form/div[2]/div[4]/div[3]/div[2]/div/div/div[3]//div[@class="ant-select-selection__rendered"]
 
+
+
+
 *** Keywords ***
 Login To UBIDY
     [Arguments]     ${USER}

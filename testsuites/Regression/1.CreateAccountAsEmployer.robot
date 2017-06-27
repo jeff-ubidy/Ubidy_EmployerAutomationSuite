@@ -12,7 +12,7 @@ ${USER}         employer
 Create Account as Employer
     #[Tags]      skip
     #Register new employer
-    Ubidy.Pages.Login To UBIDY              employer
+    Ubidy.Pages.Login To UBIDY                              employer
     #Create Profile Details
     #Validate entered profile details
     #Create Company Bio
