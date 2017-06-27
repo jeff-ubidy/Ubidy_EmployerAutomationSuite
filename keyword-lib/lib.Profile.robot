@@ -13,7 +13,7 @@ Add LOGO with VALID file format
     Wait Until Element Is Visible       ${Profile.Logo1.Image}
     #Capture Page Screenshot
     #Click Link                         ${Profile.Logo.Browse.Link}
-    Choose File                         ${Profile.Logo.Input}                   D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/logo.jpg
+    Choose File                         ${Profile.Logo.Input}                   D:/Source/Repos/Ubidy_EmployerAutomationSuite/resources/logo.jpg
     Wait Until Element Is Visible       ${Profile.Logo1.Image}
     Wait Until Element Is Visible       ${Profile.Logo.CurrentImage}
     #Click Element                      ${Profile.Logo1.Image}
@@ -44,7 +44,7 @@ Add LOGO with INVALID file format
     Wait Until Element Is Visible           ${Profile.Logo1.Image}
     #Capture Page Screenshot
     #Click Link                             ${Profile.Logo.Browse.Link}
-    Choose File                             ${Profile.Logo.Input}                       D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/xlogo.xml
+    Choose File                             ${Profile.Logo.Input}                       D:/Source/Repos/Ubidy_EmployerAutomationSuite/resources/xlogo.xml
     Wait Until Element Is Visible           ${Profile.Logo1.Image}
     Wait Until Element Is Visible           ${Profile.Logo.CurrentImage}
     Wait Until Page Contains Element        ${Profile.Logo.ErrorMsg.IncorrectFile}
@@ -99,11 +99,14 @@ Validate entered profile details
     Validate element value                  ${Profile.Details.Website.Text}             http:\\\\www.mywebsite.com
     #Capture Page Screenshot
 
+
+
 Validate element value
     [Arguments]                             ${locators}                                 ${value}
     ${attValue}=                            Get Element Attribute                       ${locators}@value
     Log to console                          ${attValue}
     Should Be Equal                         '${attValue}'                               '${value}'
+
 
 
 Update head office address
@@ -118,6 +121,7 @@ Update head office address
     #Capture Page Screenshot
 
 
+
 Update regional address
     Input Text                              ${Address.One}                              150 St. Georges Tce.
     Input Text                              ${Address.Two}                              CITI Building
@@ -128,6 +132,8 @@ Update regional address
     Input Text                              ${Address.Phone}                            +61.8.9216.5000
     Input Text                              ${Address.Email}                            testemployer1@mailinator.com
     #Capture Page Screenshot
+
+
 
 Update correspondence address
     Input Text                              ${Address.One}                              050 St. Georges Tce.

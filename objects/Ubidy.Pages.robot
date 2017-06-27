@@ -10,8 +10,8 @@ Resource         ../adapters/Selenium2Library.robot
 ${Login.Username.Text}                  id=userName
 ${Login.Password.Text}                  id=password
 ${Login.Button}                         //*[@class="ant-btn ant-btn-primary ant-btn-lg login-form-button"]
-${Agency.Username}                      testagency
-${Employer.Username}                    employee_FigNGyOm
+${Agency.Username}                      testagency1
+${Employer.Username}                    employee_kHbzmgFb
 ${Register.Link}                        //*[@href="/Register"]
 
 
@@ -37,8 +37,10 @@ ${Registration.Alert.Message}           //*[@class="ant-alert-message"]
 
 #MENUS
 ${Menu.Profile.Link}                    //*[@href="/profile"]
-
-
+${Menu.Documents.Link}                  //div[@aria-owns="Agreements$Menu"]
+${Menu.Documents.Agreement.Link}        //ul[@id="Agreements$Menu"]/li[1]/a
+${Menu.Documents.Application.Link}      //ul[@id="Agreements$Menu"]/li[2]/a
+${Menu.Requirements}                    //a[@class="u-link-item"][text()="Requirements"]
 
 
 #PROFILE > Details
@@ -107,10 +109,12 @@ ${Address.Type.Correspondence}                          //li[@class="ant-select-
 
 
 #REGIONS
-${Regions.Region.Select}                                //div[@class="ant-col-md-8"]/div
+#${Regions.Region.Select}                               //div[@class="ant-col-md-8"]/div
+${Regions.Region.Select}                                //div[@title="-- Select Region --"]
 ${Regions.Region.Select1.Label}                         //li[@class="ant-select-dropdown-menu-item"][text()='North America']
 ${Regions.Region.Select2.Label}                         //li[@class="ant-select-dropdown-menu-item"][text()='Europe']
-${Regions.Country.Select}                               //div[@class="ant-col-md-10"]/div
+#${Regions.Country.Select}                              //div[@class="ant-col-md-10"]/div
+${Regions.Country.Select}                               //div[@title="-- Select Country --"]
 ${Regions.Country.Select1.Label}                        //li[@class="ant-select-dropdown-menu-item"][text()="United States"]
 ${Regions.Country.Select2.Label}                        //li[@class="ant-select-dropdown-menu-item"][text()="Albania"]
 ${Regions.Add.Region.Button}                            //button[contains(.,'Add Region')]
@@ -120,11 +124,15 @@ ${Regions.Table.SecondRow_1.Label}                      //tbody[@class="ant-tabl
 ${Regions.Table.SecondRow_2.Label}                      //tbody[@class="ant-table-tbody"]/tr/td[2][text()="Albania"]
 
 
+
+
 #INDUSTRIES
-${Industries.Sector.Select}                             //div[@class="ant-col-md-8"]/div
+#${Industries.Sector.Select}                             //div[@class="ant-col-md-8"]/div
+${Industries.Sector.Select}                             //div[@title="-- Select Sector --"]
 ${Industries.Sector.Select1.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Construction']
 ${Industries.Sector.Select2.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Manufacturing']
-${Industries.Industry.Select}                           //div[@class="ant-col-md-10"]/div
+#${Industries.Industry.Select}                          //div[@class="ant-col-md-10"]/div
+${Industries.Industry.Select}                           //div[@title="-- Select Industry --"]
 ${Industries.Industry.Select1.Label}                    //li[@class="ant-select-dropdown-menu-item"][text()="Buildings"]
 ${Industries.Industry.Select2.Label}                    //li[@class="ant-select-dropdown-menu-item"][text()="Automotive"]
 ${Industries.Add.Industry.Button}                       //button[contains(.,'Add Industry')]
@@ -132,6 +140,8 @@ ${Industries.Table.FirstRow_1.Label}                    //tbody[@class="ant-tabl
 ${Industries.Table.FirstRow_2.Label}                    //tbody[@class="ant-table-tbody"]/tr/td[2][text()="Buildings"]
 ${Industries.Table.SecondRow_1.Label}                   //tbody[@class="ant-table-tbody"]/tr/td[1][text()="Manufacturing"]
 ${Industries.Table.SecondRow_2.Label}                   //tbody[@class="ant-table-tbody"]/tr/td[2][text()="Automotive"]
+
+
 
 
 
@@ -198,6 +208,95 @@ ${Profile.Preview.Industry.Row3}                        //div[@class="ant-row re
 ${Profile.Preview.ProjSupp.Label}                       //div[@class="ant-row project"]/div/div
 ${Profile.Preview.ProjSupp.Add.Label}                   //div[@class="ant-row project"]/div/div[2]
 ${Profile.Preview.Testimonial.Label}                    //div[@class="ant-row testimony"]/div[2]/p[2]
+
+
+
+#DOCUMENT > AGREEMENT
+${Agreement.Document.Tab}                               //div[@class="ant-tabs-tab-active ant-tabs-tab"]
+${Agreement.Document.Upload.Top.Button}                 //div[@role="tabpanel"][1]//button[contains(.,"Upload Document")][1]
+${Agreement.Document.Upload.Bottom.Button}              //div[@role="tabpanel"][1]//button[contains(.,"Upload Document")][2]
+${Agreement.Document.Upload.Modal}                      //div[@class="ant-modal-mask"]
+${Agreement.Document.Upload.Input.File}                 //div[@class="ant-upload ant-upload-drag"]/span/input
+${Agreement.Document.Upload.Save.Button}                //button[contains(.,"Save Document")]
+${Agreement.Document.Upload.Cancel.Button}              //button[contains(.,"Cancel")]
+${Agreement.Document.Upload.PaperClip}                  //div[@class="ant-upload-list-item ant-upload-list-item-done"]//i[@class="anticon anticon-paper-clip"]
+${Agreement.Document.Upload.PreQual.File}               //div[@class="ant-upload-list-item ant-upload-list-item-done"]/div/span/span[@title="prequal.pdf"]
+${Agreement.Document.Upload.Modal.DocumentName.Label}   id=documentName
+${Agreement.Document.Upload.Modal.Description.Label}    id=description
+${Agreement.Document.Upload.Modal.DocType.Select}       //div[@class="ant-select-selection__placeholder"][text()="Select Document Type"]
+${Agreement.Document.Upload.Modal.DocType.PreQual}      //li[@role="menuitem"][text()="Prequalification Requirements"]
+${Agreement.Document.Upload.Modal.DocType.NDA}          //li[@role="menuitem"][text()="Non-disclosure Agreements"]
+${Agreement.Document.Upload.Modal.DocType.TNC}          //li[@role="menuitem"][text()="Terms and Conditions"]
+${Agreement.Document.Upload.Modal.RecType.Select}       //div[@class="ant-select-selection__placeholder"][text()="Select Recruitment Type"]
+${Agreement.Document.Upload.Modal.RecType.Contract}     //li[@role="menuitem"][text()="Contract/Temp"]
+${Agreement.Document.Upload.Modal.RecType.Perm}         //li[@role="menuitem"][text()="Perm Placement"]
+${Agreement.Document.Upload.Modal.RoleCat.Select}       //div[@class="ant-select-selection__placeholder"][text()="Select Role Category"]
+${Agreement.Document.Upload.Modal.RoleCat.Ex}           //li[@role="menuitem"][text()="Executive"]
+${Agreement.Document.Upload.Modal.RoleCat.Prof}         //li[@role="menuitem"][text()="Professional"]
+${Agreement.Document.Upload.Modal.RoleCat.Skill}        //li[@role="menuitem"][text()="Skilled"]
+${Agreement.Document.Upload.Table.FileImage}            //tbody[@class="ant-table-tbody"]/tr[1]/td[1]//span[@class="file-icon pdf"]
+${Agreement.Document.Upload.Table.DocName}              //tbody[@class="ant-table-tbody"]/tr[1]/td[@class="documentFile"][1]
+${Agreement.Document.Upload.Table.RecType}              //tbody[@class="ant-table-tbody"]/tr[1]/td[2]
+${Agreement.Document.Upload.Table.RoleCat}              //tbody[@class="ant-table-tbody"]/tr[1]/td[3]
+${Agreement.Document.Upload.Table.DocType}              //tbody[@class="ant-table-tbody"]/tr[1]/td[4]
+${Agreement.Document.Upload.Table.Date}                 //tbody[@class="ant-table-tbody"]/tr[1]/td[5]
+
+
+#REQUIREMENTS > PROJECTS
+${Projects.Create.Button}                               //div[@class="form-area"]//button[@type="button"]/span[text()[contains(.,'Create Project')]]
+${Projects.Create.Modal}                                //div[@class="ant-modal-mask"]
+${Projects.Create.Project.Name.Text}                    id=project
+${Projects.Create.Ref.ID.Text}                          id=referenceId
+${Projects.Create.Sector.Select}                        //div[@title="-- Select Sector --"]
+${Projects.Create.Sector.Select.Label}                  //li[@class="ant-select-dropdown-menu-item"][text()='Construction']
+${Projects.Create.Industry.Select}                      //div[@title="-- Select Industry --"]
+${Projects.Create.Industry.Select.Label}                //li[@class='ant-select-dropdown-menu-item'][text()='Buildings']
+${Projects.Create.Region.Select}                        //div[@title="-- Select Region --"]
+${Projects.Create.Region.Select.Label}                  //li[@class="ant-select-dropdown-menu-item"][text()='Europe']
+${Projects.Create.Country.Select}                       //div[@title='-- Select Country --']
+${Projects.Create.Country.Select.Label}                 //li[@class='ant-select-dropdown-menu-item'][text()='Albania']
+${Projects.Create.Location}                             id=location
+${Projects.Save.Button}                                 //*[@type="submit"]/span[text()[contains(.,'Save Changes')]]
+${Projects.Cancel.Button}                               //*[@type="button"]/span[text()[contains(.,'Cancel')]]
+${Projects.Table}                                       //tbody[@class="ant-table-tbody"]/tr
+${Projects.Table.ProjName.Label}                        //tbody[@class="ant-table-tbody"][1]//td[2]
+${Projects.Table.Sector.Label}                          //tbody[@class="ant-table-tbody"][1]//td[3]
+${Projects.Table.Industry.Label}                        //tbody[@class="ant-table-tbody"][1]//td[4]
+${Projects.Table.Region.Label}                          //tbody[@class="ant-table-tbody"][1]//td[5]
+${Projects.Table.Country.Label}                         //tbody[@class="ant-table-tbody"][1]//td[6]
+${Projects.Table.Location.Label}                        //tbody[@class="ant-table-tbody"][1]//td[7]
+${Projects.Table.Delete.Button}                         //div[@class="ant-table-body-inner"]//button[@title="Delete"][1]
+${Projects.Table.Edit.Button}                           //div[@class="ant-table-body-inner"]//button[@title="Edit"][1]
+${Projects.Table.Archive.Button}                        //div[@class="ant-table-body-inner"]//button[@title="Archive"][1]
+${Projects.Table.Unarchive.Button}                      //div[@class="ant-table-body-inner"]//button[@title="Unarchive"][1]
+${Projects.Table.Delete.Modal}                          //div[@class="ant-modal-mask"]
+${Projects.Table.Delete.Modal.Cancel.Button}            //*[@type="button"]/span[text()[contains(.,'Cancel')]]
+${Projects.Table.Delete.Modal.Confirm.Button}           //*[@type="button"]/span[text()[contains(.,'Confirm')]]
+${Projects.Table.No.Data}                               //div[@class="ant-table-placeholder"]
+${Projects.Archive.Cancel}                              //*[@type="button"]/span[text()[contains(.,'Cancel')]]
+${Projects.Archive.Confirm}                             //*[@type="button"]/span[text()[contains(.,'Confirm')]]
+${Projects.Archive.Modal}                               //div[@class="ant-modal-mask"]
+${Projects.Archive.Checkbox}                            //input[@type="checkbox"]
+
+
+
+#REQUIREMENTS > TALENT REQUEST
+${Talent.Request.Tab}                                   //li[@role="menuitem"]/a[text()="Talent Request"]
+${Talent.Request.Create.TR.Button}                      //button[contains(.,'Create TR')]
+${Talent.Request.Create.TR.Modal}                       //div[@class="ant-modal-mask"]
+${Talent.Request.Create.Project.Name.Select}            //div[text()="Select Project"]/following-sibling::div
+${Talent.Request.Create.Project.Name.Label}             //li[@role="menuitem"][text()='Project Z']
+${Talent.Request.Create.Rec.Type.Select}                //div[text()="Select Recruitment Type"]/following-sibling::div[1]
+${Talent.Request.Create.Rec.Type.Label}                 //li[@role="menuitem"][text()='Perm Placement']
+${Talent.Request.Create.TR.Modal.ProjName}              //*[@id="talent-requestForm"]/form/div[1]/div[1]//div[@class="ant-form-item-control-wrapper"]
+${Talent.Request.Create.TR.Modal.RecType}               //*[@id="talent-requestForm"]/form/div[1]/div[2]//div[@class="ant-form-item-control-wrapper"]
+${Talent.Request.Create.TR.Modal.RoleCat}               //*[@id="talent-requestForm"]/form/div[1]/div[3]//div[@class="ant-form-item-control-wrapper"]
+${Talent.Request.Create.TR.Modal.Prof}                  //*[@id="talent-requestForm"]/form/div[2]/div[2]/div[1]/div[2]//div[@class="ant-select-selection__rendered"]
+${Talent.Request.Create.TR.Modal.PrefLang}              //*[@id="talent-requestForm"]/form/div[2]/div[3]/div[1]/div[2]//div[@class="ant-select-selection__rendered"]
+${Talent.Request.Create.TR.Modal.LangProf}              //*[@id="talent-requestForm"]/form/div[2]/div[3]/div[2]/div[2]//div[@class="ant-select-selection__rendered"]
+${Talent.Request.Create.TR.Modal.PrefOrigin}            //*[@id="talent-requestForm"]/form/div[2]/div[2]/div[3]/div[2]//div[@class="ant-select-selection__rendered"]
+${Talent.Request.Create.TR.Modal.ExpLevel}              //*[@id="talent-requestForm"]/form/div[2]/div[3]/div[3]/div[2]//div[@class="ant-select-selection__rendered"]
+${Talent.Request.Create.TR.Modal.Currency}              //*[@id="talent-requestForm"]/form/div[2]/div[4]/div[3]/div[2]/div/div/div[3]//div[@class="ant-select-selection__rendered"]
 
 *** Keywords ***
 Login To UBIDY
