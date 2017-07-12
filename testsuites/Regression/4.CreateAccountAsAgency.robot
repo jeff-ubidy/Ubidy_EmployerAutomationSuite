@@ -10,7 +10,7 @@ ${USER}         employer
 
 *** Test Cases ***
 Create Account as Agency
-    [Tags]      skip
+    [Tags]      inprogress
     Register new agency
     #Ubidy.Pages.Login To UBIDY              agency
     #Ubidy.Pages.Login To UBIDY              agency
@@ -24,32 +24,32 @@ Create Account as Agency
     #Create testimonials
 
 Create profile details
-    [Tags]      skip
+    [Tags]      inprogress
     Add details in Profile
     Validate entered profile details
 
 Create profile office address
-    [Tags]      skip
+    [Tags]      inprogress
     Create address
 
 Create profile region
-    [Tags]      skip
+    [Tags]      inprogress
     Create regions
 
 Create profile industry
-    [Tags]      skip
+    [Tags]      inprogress
     Create industries
 
 Create profile supplier history
-    [Tags]      skip
+    [Tags]      inprogress
     Create supplier history
 
 Create profile testimonials
-    [Tags]      skip
+    [Tags]      inprogress
     Create testimonials
 
 Validate profile preview
-    [Tags]      skip
+    [Tags]      inprogress
     Profile preview
 
 #Create Account as Agency

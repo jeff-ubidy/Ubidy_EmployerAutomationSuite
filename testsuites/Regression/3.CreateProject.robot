@@ -7,7 +7,7 @@ Resource            ../../imports/Ubidy.Resources.robot
 
 *** Test Cases ***
 Employer wll create a new project
-    [Tags]      skip
+    [Tags]      inprogress
     Set Selenium Implicit Wait          2
     Set Selenium Timeout                2
     Wait Until Page Contains Element                    ${Menu.Requirements}

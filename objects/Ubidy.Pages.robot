@@ -11,8 +11,9 @@ ${Login.Username.Text}                  id=userName
 ${Login.Password.Text}                  id=password
 ${Login.Button}                         //*[@class="ant-btn ant-btn-primary ant-btn-lg login-form-button"]
 ${Agency.Username}                      testagency1
-${Employer.Username}                    employee_kHbzmgFb
+${Employer.Username}                    employee_IGwVH93B
 ${Register.Link}                        //*[@href="/Register"]
+
 
 
 
@@ -43,14 +44,17 @@ ${Menu.Documents.Application.Link}      //ul[@id="Agreements$Menu"]/li[2]/a
 ${Menu.Requirements}                    //a[@class="u-link-item"][text()="Requirements"]
 
 
+
+
 #PROFILE > Details
 ${Company.Logo.Button}                                  //*[@alt="Company Logo"]
 ${Profile.Logo.Browse.Link}                             id=dzclickprofilepicture
 ${Profile.Logo.Popup.Select.Button}                     //*[@class="ant-btn ant-btn-primary ant-btn-lg"]
 ${Profile.Logo1.Image}                                  //*[@alt="Sample Company Logo 1"]
-${Profile.Logo.Input}                                   //*[@class="dz-hidden-input"]
+#${Profile.Logo.Input}                                   //*[@class="dz-hidden-input"]
+${Profile.Logo.Input}                                   //input[@type="file"]
 ${Profile.Logo.CurrentImage}                            //*[@class="current-img"]
-${Profile.Logo.ErrorMsg.IncorrectFile}                  //*[@class="dz-error-message"]
+${Profile.Logo.ErrorMsg.IncorrectFile}                  //div[@class="ant-upload-list-item ant-upload-list-item-error"]
 ${Profile.Details.CompanyName.Text}                     id=companyName
 ${Profile.Details.Email.Text}                           id=email
 ${Profile.Details.PhoneNo.Text}                         id=phoneNo
@@ -69,6 +73,7 @@ ${Profile.Save.Button}                                  //*[@type="submit"]/span
 ${Profile.AddOffice.Button}                             //button[contains(.,'Add Office Address')]
 ${Profile.Details.Left.Menu.Link}                       //li[@class="ant-menu-item"]/a[text()[contains(.,"Profile Details")]]
 ${Addresses.Left.Menu.Link}                             //li[@class="ant-menu-item"]/a[text()[contains(.,"Addresses")]]
+
 
 
 
@@ -122,7 +127,7 @@ ${Regions.Table.FirstRow_1.Label}                       //tbody[@class="ant-tabl
 ${Regions.Table.FirstRow_2.Label}                       //tbody[@class="ant-table-tbody"]/tr/td[2][text()="United States"]
 ${Regions.Table.SecondRow_1.Label}                      //tbody[@class="ant-table-tbody"]/tr/td[1][text()="Europe"]
 ${Regions.Table.SecondRow_2.Label}                      //tbody[@class="ant-table-tbody"]/tr/td[2][text()="Albania"]
-
+${Regions.Left.Menu.Link}                               //li[@class="ant-menu-item"]/a[text()[contains(.,"Regions")]]
 
 
 
@@ -240,6 +245,7 @@ ${Agreement.Document.Upload.Table.RecType}              //tbody[@class="ant-tabl
 ${Agreement.Document.Upload.Table.RoleCat}              //tbody[@class="ant-table-tbody"]/tr[1]/td[3]
 ${Agreement.Document.Upload.Table.DocType}              //tbody[@class="ant-table-tbody"]/tr[1]/td[4]
 ${Agreement.Document.Upload.Table.Date}                 //tbody[@class="ant-table-tbody"]/tr[1]/td[5]
+
 
 
 #REQUIREMENTS > PROJECTS
