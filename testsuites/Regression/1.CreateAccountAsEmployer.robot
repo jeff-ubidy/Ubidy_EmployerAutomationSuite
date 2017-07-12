@@ -1,5 +1,5 @@
 *** Settings ***
-#Suite Teardown      Ubidy.Browser.Close
+Suite Teardown      Ubidy.Browser.Close
 Test Teardown       Run Keyword If Test Failed              Capture Page Screenshot
 Resource            ../../settings/Settings.robot
 Resource            ../../imports/Ubidy.Resources.robot
