@@ -6,7 +6,7 @@ Resource            ../../imports/Ubidy.Resources.robot
 
 *** Test Cases ***
 Upload an agreement document
-    [Tags]      skip
+    [Tags]      inprogress
     #Wait Until Page Contains Element                    ${Menu.Documents.Link}
     lib.Ubidy.Scroll to element                         ${Menu.Profile.Link}
     #Click Element                                       ${Menu.Profile.Link}

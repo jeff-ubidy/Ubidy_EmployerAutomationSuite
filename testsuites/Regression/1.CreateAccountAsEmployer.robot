@@ -5,14 +5,15 @@ Resource            ../../settings/Settings.robot
 Resource            ../../imports/Ubidy.Resources.robot
 
 *** Variables ***
-${USER}         employer
-#${random.username}	    kVrgyuoi
+${USER}                 employer
+${random}	            kVrgyuoi
+
 
 *** Test Cases ***
 Create Account as Employer
-    #[Tags]      skip
-    #Register new employer
-    Ubidy.Pages.Login To UBIDY                              employer
+    [Tags]      skip
+    Register new employer
+    #Ubidy.Pages.Login To UBIDY                              employer
     #Create Profile Details
     #Validate entered profile details
     #Create Company Bio
@@ -25,30 +26,30 @@ Create Account as Employer
 Create profile details
     [Tags]      skip
     Add details in Profile
-    Validate entered profile details
+    #Validate entered profile details
 
 Create profile office address
-    [Tags]      skip
+    [Tags]      inprogress
     Create address
 
 Create profile region
-    [Tags]      skip
+    [Tags]      inprogress
     Create regions
 
 Create profile industry
-    [Tags]      skip
+    [Tags]      inprogress
     Create industries
 
 Create profile supplier history
-    [Tags]      skip
+    [Tags]      inprogress
     Create supplier history
 
 Create profile testimonials
-    [Tags]      skip
+    [Tags]      inprogress
     Create testimonials
 
 Validate profile preview
-    [Tags]      skip
+    [Tags]      inprogress
     Profile preview
 
 #Create Account as Agency
@@ -62,8 +63,6 @@ Register new employer
     Log to console                      ${random.username}
     Ubidy.Browser.Open                  ${USER}
     Click Link                          ${Register.Link}
-    Set Selenium Implicit Wait          2
-    Set Selenium Timeout                2
     Input Text                          ${Login.Username.Text}                      employee_${random.username}
     Input Text                          ${Registration.CompanyName.Text}            employee_${random.username}
     Input Text                          ${Registration.FirstName.Text}              employee_${random.username}
@@ -95,11 +94,11 @@ Register new employer
 
 
 Add details in Profile
-    Wait Until Page Contains Element    ${Profile.Edit.Button}
-    Wait Until Page Contains Element    ${Profile.Continue.Button}
+    Wait Until Page Contains Element                                                ${Profile.Edit.Button}
+    Wait Until Page Contains Element                                                ${Profile.Continue.Button}
     lib.Profile.Update profile information
-    lib.Profile.Add LOGO with VALID file format
-    lib.Profile.Add LOGO with INVALID file format
+    #lib.Profile.Add LOGO with VALID file format
+    #lib.Profile.Add LOGO with INVALID file format
 
 
 
@@ -180,11 +179,15 @@ Create address
     Set Selenium Timeout                ${Selenium.Timeout}
 
 
+
 Create regions
-    Set Selenium Implicit Wait          2
-    Set Selenium Timeout                2
+    Set Selenium Implicit Wait          10
+    Set Selenium Timeout                10
     Click Element                       ${Profile.Continue.Button}
+    #Click Element                       ${Regions.Left.Menu.Link}
     Wait Until Page Contains Element    ${Regions.Region.Select}
+    Reload Page
+    #sleep       120s
     Focus                               ${Regions.Region.Select}
     Click Element                       ${Regions.Region.Select}
     Capture Page Screenshot
@@ -217,8 +220,8 @@ Create regions
     Set Selenium Timeout                ${Selenium.Timeout}
 
 Create industries
-    Set Selenium Implicit Wait          2
-    Set Selenium Timeout                2
+    Set Selenium Implicit Wait          10
+    Set Selenium Timeout                10
     Click Element                       ${Profile.Continue.Button}
     #Click Element   //li[@class="ant-menu-item"]/a[text()[contains(.,"Industries")]]
     Wait Until Page Contains Element    ${Industries.Sector.Select}

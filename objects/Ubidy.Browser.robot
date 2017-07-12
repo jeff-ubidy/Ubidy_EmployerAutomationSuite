@@ -41,9 +41,9 @@ OpenChrome
     ${chrome options}=                  Evaluate        sys.modules['selenium.webdriver'].ChromeOptions()       sys, selenium.webdriver
     Call Method    ${chrome options}        add_argument    disable-component-extensions-with-background-pages
     Call Method    ${chrome options}        add_argument    start-maximized
-    Call Method    ${chrome options}        add_argument    disable-extensions
-    Call Method    ${chrome options}        add_argument    test-type
     Call Method    ${chrome options}        add_argument    disable-infobars
+    #Call Method    ${chrome options}        add_argument    disable-extensions
+    #Call Method    ${chrome options}        add_argument    test-type
     Create Webdriver        Chrome          chrome_options=${chrome options}
 
 

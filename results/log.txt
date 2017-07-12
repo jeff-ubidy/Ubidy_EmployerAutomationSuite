@@ -1,1113 +1,392 @@
 ==============================================================================
-20170627 16:44:02.848 - INFO - + START SUITE: Regression [ ]
+20170712 11:54:31.298 - INFO - + START SUITE: Regression [ ]
 ==============================================================================
-20170627 16:44:02.983 - INFO - +- START SUITE: Regression.1.CreateAccountAsEmployer [ ]
+20170712 11:54:31.434 - INFO - +- START SUITE: Regression.1.CreateAccountAsEmployer [ ]
 ==============================================================================
-20170627 16:44:02.983 - INFO - +-- START TEST: Create Account as Employer [ ]
+20170712 11:54:31.449 - INFO - +-- START TEST: Create Account as Employer [ ]
 ------------------------------------------------------------------------------
-20170627 16:44:02.983 - INFO - +--- START KW: Ubidy.Pages.Login To UBIDY [ employer ]
-20170627 16:44:02.999 - INFO - +---- START KW: Ubidy.Browser.Open [ ${USER} ]
-20170627 16:44:02.999 - INFO - +----- START KW: OperatingSystem.Set Environment Variable [ no_proxy | 127.0.0.1 ]
-20170627 16:44:02.999 - INFO - Environment variable 'no_proxy' set to value '127.0.0.1'.
-20170627 16:44:02.999 - INFO - +----- END KW: OperatingSystem.Set Environment Variable (0)
-20170627 16:44:02.999 - INFO - +----- START KW: OperatingSystem.Append To Environment Variable [ PATH | D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/ ]
-20170627 16:44:02.999 - INFO - Environment variable 'PATH' set to value 'C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Users\Jeffrey Givera\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Jeffrey Givera\AppData\Roaming\npm;C:\Python27\;C:\Python27\Scripts\;D:\Source\Repos\Ubidy_AutomationSuite\browser-driver\;D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/'.
-20170627 16:44:02.999 - INFO - +----- END KW: OperatingSystem.Append To Environment Variable (0)
-20170627 16:44:02.999 - INFO - +----- START KW: Ubidy.Browser.OpenChrome [ ]
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Evaluate [ sys.modules['selenium.webdriver'].ChromeOptions() | sys, selenium.webdriver ]
-20170627 16:44:02.999 - INFO - ${chrome options} = <selenium.webdriver.chrome.options.Options object at 0x03607330>
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Evaluate (0)
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-component-extensions-with-background-pages ]
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | start-maximized ]
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-extensions ]
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | test-type ]
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:44:02.999 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-infobars ]
-20170627 16:44:02.999 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:44:02.999 - INFO - +------ START KW: Selenium2Library.Create Webdriver [ Chrome | chrome_options=${chrome options} ]
-20170627 16:44:02.999 - INFO - Creating an instance of the Chrome WebDriver
-20170627 16:44:05.025 - DEBUG - POST http://127.0.0.1:64316/session {"capabilities": {"alwaysMatch": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-extensions", "test-type", "disable-infobars"], "extensions": []}}, "firstMatch": []}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-extensions", "test-type", "disable-infobars"], "extensions": []}}}
-20170627 16:44:06.401 - DEBUG - Finished Request
-20170627 16:44:06.401 - DEBUG - Created Chrome WebDriver instance with session id e8f250683b6796099190b3a3487677af
-20170627 16:44:06.401 - INFO - +------ END KW: Selenium2Library.Create Webdriver (3402)
-20170627 16:44:06.401 - INFO - +----- END KW: Ubidy.Browser.OpenChrome (3402)
-20170627 16:44:06.401 - INFO - +----- START KW: Selenium2Library.Set Selenium Implicit Wait [ ${Selenium.Timeout} ]
-20170627 16:44:06.401 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 120000.0}
-20170627 16:44:06.401 - DEBUG - Finished Request
-20170627 16:44:06.401 - INFO - +----- END KW: Selenium2Library.Set Selenium Implicit Wait (0)
-20170627 16:44:06.401 - INFO - +----- START KW: Selenium2Library.Set Selenium Timeout [ ${Selenium.Timeout} ]
-20170627 16:44:06.417 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 120000.0}
-20170627 16:44:06.418 - DEBUG - Finished Request
-20170627 16:44:06.419 - INFO - +----- END KW: Selenium2Library.Set Selenium Timeout (17)
-20170627 16:44:06.419 - INFO - +----- START KW: Ubidy.Browser.Init UBIDY [ ${USER} ]
-20170627 16:44:06.419 - INFO - +------ START KW: Selenium2Library.Delete All Cookies [ ]
-20170627 16:44:06.420 - DEBUG - DELETE http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/cookie {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:44:07.104 - DEBUG - Finished Request
-20170627 16:44:07.104 - INFO - +------ END KW: Selenium2Library.Delete All Cookies (685)
-20170627 16:44:07.104 - INFO - +------ START KW: Ubidy.Browser.Go To UBIDY [ ${USER} ]
-20170627 16:44:07.104 - INFO - +------- START KW: Selenium2Library.Get Location [ ]
-20170627 16:44:07.104 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/url {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:44:07.120 - DEBUG - Finished Request
-20170627 16:44:07.120 - INFO - ${Current.Location} = data:,
-20170627 16:44:07.120 - INFO - +------- END KW: Selenium2Library.Get Location (16)
-20170627 16:44:07.120 - INFO - +------- START KW: BuiltIn.Log Many [ ${Current.Location} ]
-20170627 16:44:07.120 - INFO - data:,
-20170627 16:44:07.120 - INFO - +------- END KW: BuiltIn.Log Many (0)
-20170627 16:44:07.120 - INFO - +------- START KW: BuiltIn.Log Many [ ${USER} ]
-20170627 16:44:07.120 - INFO - employer
-20170627 16:44:07.120 - INFO - +------- END KW: BuiltIn.Log Many (0)
-20170627 16:44:07.120 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='employer' | Selenium2Library.Go To | ${Employer.Url} ]
-20170627 16:44:07.120 - INFO - +-------- START KW: Selenium2Library.Go To [ ${Employer.Url} ]
-20170627 16:44:07.120 - INFO - Opening url 'http://employerdev.ubidywebsite.com:8081'
-20170627 16:44:07.120 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/url {"url": "http://employerdev.ubidywebsite.com:8081", "sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:44:09.827 - DEBUG - Finished Request
-20170627 16:44:09.828 - INFO - +-------- END KW: Selenium2Library.Go To (2708)
-20170627 16:44:09.829 - INFO - +------- END KW: BuiltIn.Run Keyword If (2708)
-20170627 16:44:09.829 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='agency' | Selenium2Library.Go To | ${Agency.Url} ]
-20170627 16:44:09.830 - INFO - +------- END KW: BuiltIn.Run Keyword If (1)
-20170627 16:44:09.830 - INFO - +------ END KW: Ubidy.Browser.Go To UBIDY (2726)
-20170627 16:44:09.830 - INFO - +------ START KW: Selenium2Library.Set Selenium Speed [ ${DELAY} ]
-20170627 16:44:09.831 - INFO - +------ END KW: Selenium2Library.Set Selenium Speed (1)
-20170627 16:44:09.831 - INFO - +------ START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:44:09.839 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:44:10.109 - DEBUG - Finished Request
-20170627 16:44:10.112 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-1.png"><img src="selenium-screenshot-1.png" width="800px"></a>
-20170627 16:44:10.112 - INFO - +------ END KW: Selenium2Library.Capture Page Screenshot (281)
-20170627 16:44:10.112 - INFO - +----- END KW: Ubidy.Browser.Init UBIDY (3693)
-20170627 16:44:10.112 - INFO - +---- END KW: Ubidy.Browser.Open (7113)
-20170627 16:44:10.113 - INFO - +---- START KW: BuiltIn.Run Keyword If [ '${USER}'=='employer' | Input Text | ${Login.Username.Text} | ${Employer.Username} ]
-20170627 16:44:10.114 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Login.Username.Text} | ${Employer.Username} ]
-20170627 16:44:10.114 - INFO - Typing text 'employee_kHbzmgFb' into text field 'id=userName'
-20170627 16:44:10.114 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "id", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "userName"}
-20170627 16:44:10.132 - DEBUG - Finished Request
-20170627 16:44:10.134 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/element/0.9773783212895051-1/clear {"sessionId": "e8f250683b6796099190b3a3487677af", "id": "0.9773783212895051-1"}
-20170627 16:44:10.155 - DEBUG - Finished Request
-20170627 16:44:10.157 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/element/0.9773783212895051-1/value {"text": "employee_kHbzmgFb", "sessionId": "e8f250683b6796099190b3a3487677af", "id": "0.9773783212895051-1", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "k", "H", "b", "z", "m", "g", "F", "b"]}
-20170627 16:44:10.366 - DEBUG - Finished Request
-20170627 16:44:10.367 - INFO - +----- END KW: Selenium2Library.Input Text (253)
-20170627 16:44:10.367 - INFO - +---- END KW: BuiltIn.Run Keyword If (254)
-20170627 16:44:10.367 - INFO - +---- START KW: BuiltIn.Run Keyword If [ '${USER}'=='agency' | Input Text | ${Login.Username.Text} | ${Agency.Username} ]
-20170627 16:44:10.368 - INFO - +---- END KW: BuiltIn.Run Keyword If (1)
-20170627 16:44:10.368 - INFO - +---- START KW: Selenium2Library.Input Password [ ${Login.Password.Text} | ubidy123 ]
-20170627 16:44:10.368 - INFO - Typing password into text field 'id=password'
-20170627 16:44:10.368 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "id", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "password"}
-20170627 16:44:10.385 - DEBUG - Finished Request
-20170627 16:44:10.386 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/element/0.9773783212895051-2/clear {"sessionId": "e8f250683b6796099190b3a3487677af", "id": "0.9773783212895051-2"}
-20170627 16:44:10.406 - DEBUG - Finished Request
-20170627 16:44:10.408 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/element/0.9773783212895051-2/value {"text": "ubidy123", "sessionId": "e8f250683b6796099190b3a3487677af", "id": "0.9773783212895051-2", "value": ["u", "b", "i", "d", "y", "1", "2", "3"]}
-20170627 16:44:10.508 - DEBUG - Finished Request
-20170627 16:44:10.509 - INFO - +---- END KW: Selenium2Library.Input Password (141)
-20170627 16:44:10.509 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:44:10.516 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:44:10.798 - DEBUG - Finished Request
-20170627 16:44:10.801 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-2.png"><img src="selenium-screenshot-2.png" width="800px"></a>
-20170627 16:44:10.801 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (292)
-20170627 16:44:10.801 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Login.Button} ]
-20170627 16:44:10.801 - INFO - Clicking element '//*[@class="ant-btn ant-btn-primary ant-btn-lg login-form-button"]'.
-20170627 16:44:10.801 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@class=\"ant-btn ant-btn-primary ant-btn-lg login-form-button\"]"}
-20170627 16:44:10.821 - DEBUG - Finished Request
-20170627 16:44:10.822 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/element/0.9773783212895051-3/click {"sessionId": "e8f250683b6796099190b3a3487677af", "id": "0.9773783212895051-3"}
-20170627 16:44:10.891 - DEBUG - Finished Request
-20170627 16:44:10.892 - INFO - +---- END KW: Selenium2Library.Click Element (91)
-20170627 16:44:10.893 - INFO - +--- END KW: Ubidy.Pages.Login To UBIDY (7909)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:44:10.893 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:44:10.894 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (1)
-------------------------------------------------------------------------------
-20170627 16:44:10.898 - INFO - +-- END TEST: Create Account as Employer (7912)
-------------------------------------------------------------------------------
-20170627 16:44:10.898 - INFO - +-- START TEST: Create profile details [ ]
-------------------------------------------------------------------------------
-20170627 16:44:10.900 - INFO - +--- START KW: Add details in Profile [ ]
-20170627 16:44:10.901 - INFO - +---- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Edit.Button} ]
-20170627 16:44:10.901 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()='Edit']"}
-20170627 16:46:10.965 - DEBUG - Finished Request
-20170627 16:46:10.968 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:10.983 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:11.245 - DEBUG - Finished Request
-20170627 16:46:11.248 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-3.png"><img src="selenium-screenshot-3.png" width="800px"></a>
-20170627 16:46:11.248 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (280)
-20170627 16:46:11.248 - FAIL - Element '//*[@type="button"]/span[text()='Edit']' did not appear in 2 minutes
-20170627 16:46:11.249 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-154>", line 2, in wait_until_page_contains_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 84, in wait_until_page_contains_element
-    self._wait_until(timeout, error, self._is_element_present, locator)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 231, in _wait_until
-    self._wait_until_no_error(timeout, wait_func)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 240, in _wait_until_no_error
-    raise AssertionError(timeout_error)
-20170627 16:46:11.249 - INFO - +---- END KW: Selenium2Library.Wait Until Page Contains Element (120348)
-20170627 16:46:11.249 - INFO - +--- END KW: Add details in Profile (120349)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:11.250 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:11.250 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:11.256 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:11.520 - DEBUG - Finished Request
-20170627 16:46:11.523 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-4.png"><img src="selenium-screenshot-4.png" width="800px"></a>
-20170627 16:46:11.523 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (273)
-20170627 16:46:11.524 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (273)
-------------------------------------------------------------------------------
-20170627 16:46:11.530 - INFO - +-- END TEST: Create profile details (120626)
-------------------------------------------------------------------------------
-20170627 16:46:11.530 - INFO - +-- START TEST: Create profile office address [ ]
-------------------------------------------------------------------------------
-20170627 16:46:11.531 - INFO - +--- START KW: Create address [ ]
-20170627 16:46:11.531 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:11.531 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:11.533 - DEBUG - Finished Request
-20170627 16:46:11.534 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:11.534 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:11.534 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:11.536 - DEBUG - Finished Request
-20170627 16:46:11.537 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:11.537 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Addresses.Left.Menu.Link} ]
-20170627 16:46:11.537 - INFO - Clicking element '//li[@class="ant-menu-item"]/a[text()[contains(.,"Addresses")]]'.
-20170627 16:46:11.537 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//li[@class=\"ant-menu-item\"]/a[text()[contains(.,\"Addresses\")]]"}
-20170627 16:46:13.542 - DEBUG - Finished Request
-20170627 16:46:13.543 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:13.549 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:13.807 - DEBUG - Finished Request
-20170627 16:46:13.810 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-5.png"><img src="selenium-screenshot-5.png" width="800px"></a>
-20170627 16:46:13.810 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (267)
-20170627 16:46:13.811 - FAIL - ValueError: Element locator '//li[@class="ant-menu-item"]/a[text()[contains(.,"Addresses")]]' did not match any elements.
-20170627 16:46:13.811 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:13.811 - INFO - +---- END KW: Selenium2Library.Click Element (2274)
-20170627 16:46:13.812 - INFO - +--- END KW: Create address (2280)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:13.812 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:13.813 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:13.819 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:14.094 - DEBUG - Finished Request
-20170627 16:46:14.097 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-6.png"><img src="selenium-screenshot-6.png" width="800px"></a>
-20170627 16:46:14.097 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (284)
-20170627 16:46:14.098 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (285)
-------------------------------------------------------------------------------
-20170627 16:46:14.101 - INFO - +-- END TEST: Create profile office address (2568)
-------------------------------------------------------------------------------
-20170627 16:46:14.101 - INFO - +-- START TEST: Create profile region [ ]
-------------------------------------------------------------------------------
-20170627 16:46:14.101 - INFO - +--- START KW: Create regions [ ]
-20170627 16:46:14.102 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:14.102 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:14.103 - DEBUG - Finished Request
-20170627 16:46:14.105 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:14.105 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:14.105 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:14.107 - DEBUG - Finished Request
-20170627 16:46:14.109 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (4)
-20170627 16:46:14.109 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:14.109 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:14.109 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:16.145 - DEBUG - Finished Request
-20170627 16:46:16.147 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:16.162 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:16.421 - DEBUG - Finished Request
-20170627 16:46:16.424 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-7.png"><img src="selenium-screenshot-7.png" width="800px"></a>
-20170627 16:46:16.424 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (277)
-20170627 16:46:16.425 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:16.425 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:16.426 - INFO - +---- END KW: Selenium2Library.Click Element (2316)
-20170627 16:46:16.427 - INFO - +--- END KW: Create regions (2325)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:16.427 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:16.427 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:16.433 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:16.707 - DEBUG - Finished Request
-20170627 16:46:16.709 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-8.png"><img src="selenium-screenshot-8.png" width="800px"></a>
-20170627 16:46:16.710 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (282)
-20170627 16:46:16.711 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (283)
-------------------------------------------------------------------------------
-20170627 16:46:16.715 - INFO - +-- END TEST: Create profile region (2610)
-------------------------------------------------------------------------------
-20170627 16:46:16.715 - INFO - +-- START TEST: Create profile industry [ ]
-------------------------------------------------------------------------------
-20170627 16:46:16.715 - INFO - +--- START KW: Create industries [ ]
-20170627 16:46:16.716 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:16.716 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:16.718 - DEBUG - Finished Request
-20170627 16:46:16.719 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:16.719 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:16.719 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:16.721 - DEBUG - Finished Request
-20170627 16:46:16.722 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:16.722 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:16.722 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:16.722 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:18.764 - DEBUG - Finished Request
-20170627 16:46:18.765 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:18.770 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:19.039 - DEBUG - Finished Request
-20170627 16:46:19.042 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-9.png"><img src="selenium-screenshot-9.png" width="800px"></a>
-20170627 16:46:19.042 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (277)
-20170627 16:46:19.042 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:19.042 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:19.043 - INFO - +---- END KW: Selenium2Library.Click Element (2320)
-20170627 16:46:19.043 - INFO - +--- END KW: Create industries (2328)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:19.044 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:19.044 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:19.050 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:19.331 - DEBUG - Finished Request
-20170627 16:46:19.334 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-10.png"><img src="selenium-screenshot-10.png" width="800px"></a>
-20170627 16:46:19.334 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (290)
-20170627 16:46:19.335 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (290)
-------------------------------------------------------------------------------
-20170627 16:46:19.337 - INFO - +-- END TEST: Create profile industry (2620)
-------------------------------------------------------------------------------
-20170627 16:46:19.338 - INFO - +-- START TEST: Create profile supplier history [ ]
-------------------------------------------------------------------------------
-20170627 16:46:19.338 - INFO - +--- START KW: Create supplier history [ ]
-20170627 16:46:19.338 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:19.339 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:19.340 - DEBUG - Finished Request
-20170627 16:46:19.342 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:46:19.342 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:19.342 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:19.344 - DEBUG - Finished Request
-20170627 16:46:19.345 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:19.345 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:19.345 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:19.345 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:21.375 - DEBUG - Finished Request
-20170627 16:46:21.377 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:21.390 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:21.670 - DEBUG - Finished Request
-20170627 16:46:21.672 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-11.png"><img src="selenium-screenshot-11.png" width="800px"></a>
-20170627 16:46:21.672 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (296)
-20170627 16:46:21.673 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:21.673 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:21.673 - INFO - +---- END KW: Selenium2Library.Click Element (2328)
-20170627 16:46:21.674 - INFO - +--- END KW: Create supplier history (2335)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:21.674 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:21.675 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:21.681 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:21.951 - DEBUG - Finished Request
-20170627 16:46:21.953 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-12.png"><img src="selenium-screenshot-12.png" width="800px"></a>
-20170627 16:46:21.953 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (278)
-20170627 16:46:21.954 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (280)
-------------------------------------------------------------------------------
-20170627 16:46:21.957 - INFO - +-- END TEST: Create profile supplier history (2617)
-------------------------------------------------------------------------------
-20170627 16:46:21.957 - INFO - +-- START TEST: Create profile testimonials [ ]
-------------------------------------------------------------------------------
-20170627 16:46:21.958 - INFO - +--- START KW: Create testimonials [ ]
-20170627 16:46:21.958 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:21.959 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:21.960 - DEBUG - Finished Request
-20170627 16:46:21.961 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:21.961 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:21.961 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:21.962 - DEBUG - Finished Request
-20170627 16:46:21.964 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:21.964 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:21.964 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:21.964 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:24.007 - DEBUG - Finished Request
-20170627 16:46:24.011 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:24.022 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:24.290 - DEBUG - Finished Request
-20170627 16:46:24.293 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-13.png"><img src="selenium-screenshot-13.png" width="800px"></a>
-20170627 16:46:24.293 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (282)
-20170627 16:46:24.293 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:24.293 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:24.294 - INFO - +---- END KW: Selenium2Library.Click Element (2330)
-20170627 16:46:24.294 - INFO - +--- END KW: Create testimonials (2336)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:24.295 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:24.295 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:24.301 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:24.556 - DEBUG - Finished Request
-20170627 16:46:24.559 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-14.png"><img src="selenium-screenshot-14.png" width="800px"></a>
-20170627 16:46:24.559 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (264)
-20170627 16:46:24.559 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (264)
-------------------------------------------------------------------------------
-20170627 16:46:24.561 - INFO - +-- END TEST: Create profile testimonials (2602)
-------------------------------------------------------------------------------
-20170627 16:46:24.562 - INFO - +-- START TEST: Validate profile preview [ ]
-------------------------------------------------------------------------------
-20170627 16:46:24.562 - INFO - +--- START KW: Profile preview [ ]
-20170627 16:46:24.563 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:24.563 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:24.565 - DEBUG - Finished Request
-20170627 16:46:24.566 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:24.566 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:24.566 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:24.568 - DEBUG - Finished Request
-20170627 16:46:24.569 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:24.569 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:24.569 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:24.569 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:26.575 - DEBUG - Finished Request
-20170627 16:46:26.576 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:26.582 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:26.839 - DEBUG - Finished Request
-20170627 16:46:26.842 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-15.png"><img src="selenium-screenshot-15.png" width="800px"></a>
-20170627 16:46:26.843 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (266)
-20170627 16:46:26.843 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:26.843 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:26.843 - INFO - +---- END KW: Selenium2Library.Click Element (2274)
-20170627 16:46:26.844 - INFO - +--- END KW: Profile preview (2281)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:26.844 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:26.844 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:26.850 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:27.114 - DEBUG - Finished Request
-20170627 16:46:27.117 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-16.png"><img src="selenium-screenshot-16.png" width="800px"></a>
-20170627 16:46:27.117 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (273)
-20170627 16:46:27.118 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (273)
-------------------------------------------------------------------------------
-20170627 16:46:27.120 - INFO - +-- END TEST: Validate profile preview (2557)
-------------------------------------------------------------------------------
-20170627 16:46:27.127 - INFO - +- END SUITE: Regression.1.CreateAccountAsEmployer (144273)
-==============================================================================
-20170627 16:46:27.143 - INFO - +- START SUITE: Regression.2.UploadAgreementDocument [ ]
-==============================================================================
-20170627 16:46:27.146 - INFO - +-- START TEST: Upload an agreement document [ ]
-------------------------------------------------------------------------------
-20170627 16:46:27.146 - INFO - +--- START KW: lib.Ubidy.Scroll to element [ ${Menu.Profile.Link} ]
-20170627 16:46:27.147 - INFO - +---- START KW: Selenium2Library.Execute Javascript [ document.evaluate('${locators}', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true); ]
-20170627 16:46:27.147 - INFO - Executing JavaScript:
-document.evaluate('//*[@href="/profile"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);
-20170627 16:46:27.147 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/execute {"sessionId": "e8f250683b6796099190b3a3487677af", "args": [], "script": "document.evaluate('//*[@href=\"/profile\"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);"}
-20170627 16:46:27.153 - DEBUG - Finished Request
-20170627 16:46:27.154 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:27.161 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:27.428 - DEBUG - Finished Request
-20170627 16:46:27.430 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-17.png"><img src="selenium-screenshot-17.png" width="800px"></a>
-20170627 16:46:27.431 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (277)
-20170627 16:46:27.432 - FAIL - WebDriverException: Message: unknown error: Cannot read property 'scrollIntoView' of null
-  (Session info: chrome=59.0.3071.86)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64)
-20170627 16:46:27.432 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-139>", line 2, in execute_javascript
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_javascript.py", line 38, in execute_javascript
-    return self._current_browser().execute_script(js)
-  File "C:\Python27\lib\site-packages\selenium-3.4.3-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 491, in execute_script
-    'args': converted_args})['value']
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\webdrivermonkeypatches.py", line 11, in execute
-    result = self._base_execute(driver_command, params)
-  File "C:\Python27\lib\site-packages\selenium-3.4.3-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 256, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python27\lib\site-packages\selenium-3.4.3-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-20170627 16:46:27.432 - INFO - +---- END KW: Selenium2Library.Execute Javascript (285)
-20170627 16:46:27.433 - INFO - +--- END KW: lib.Ubidy.Scroll to element (286)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:27.433 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:27.433 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:27.439 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:27.708 - DEBUG - Finished Request
-20170627 16:46:27.711 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-18.png"><img src="selenium-screenshot-18.png" width="800px"></a>
-20170627 16:46:27.711 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (278)
-20170627 16:46:27.712 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (278)
-------------------------------------------------------------------------------
-20170627 16:46:27.714 - INFO - +-- END TEST: Upload an agreement document (568)
-------------------------------------------------------------------------------
-20170627 16:46:27.716 - INFO - +- END SUITE: Regression.2.UploadAgreementDocument (588)
-==============================================================================
-20170627 16:46:27.731 - INFO - +- START SUITE: Regression.3.CreateProject [ ]
-==============================================================================
-20170627 16:46:27.733 - INFO - +-- START TEST: Employer wll create a new project [ ]
-------------------------------------------------------------------------------
-20170627 16:46:27.734 - INFO - +--- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:27.734 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/implicit_wait {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:27.736 - DEBUG - Finished Request
-20170627 16:46:27.737 - INFO - +--- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:27.738 - INFO - +--- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:27.738 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/timeouts/async_script {"sessionId": "e8f250683b6796099190b3a3487677af", "ms": 2000.0}
-20170627 16:46:27.739 - DEBUG - Finished Request
-20170627 16:46:27.741 - INFO - +--- END KW: Selenium2Library.Set Selenium Timeout (4)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:27.742 - INFO - +--- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Menu.Requirements} ]
-20170627 16:46:27.742 - DEBUG - POST http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/elements {"using": "xpath", "sessionId": "e8f250683b6796099190b3a3487677af", "value": "//a[@class=\"u-link-item\"][text()=\"Requirements\"]"}
-20170627 16:46:29.787 - DEBUG - Finished Request
-20170627 16:46:29.788 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:29.796 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:30.057 - DEBUG - Finished Request
-20170627 16:46:30.059 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-19.png"><img src="selenium-screenshot-19.png" width="800px"></a>
-20170627 16:46:30.060 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (272)
-20170627 16:46:30.060 - FAIL - Element '//a[@class="u-link-item"][text()="Requirements"]' did not appear in 2 seconds
-20170627 16:46:30.060 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-154>", line 2, in wait_until_page_contains_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 84, in wait_until_page_contains_element
-    self._wait_until(timeout, error, self._is_element_present, locator)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 231, in _wait_until
-    self._wait_until_no_error(timeout, wait_func)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 240, in _wait_until_no_error
-    raise AssertionError(timeout_error)
-20170627 16:46:30.061 - INFO - +--- END KW: Selenium2Library.Wait Until Page Contains Element (2318)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:30.061 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:30.062 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:30.068 - DEBUG - GET http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af/screenshot {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:30.344 - DEBUG - Finished Request
-20170627 16:46:30.346 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-20.png"><img src="selenium-screenshot-20.png" width="800px"></a>
-20170627 16:46:30.347 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (285)
-20170627 16:46:30.347 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (286)
-------------------------------------------------------------------------------
-20170627 16:46:30.349 - INFO - +-- END TEST: Employer wll create a new project (2614)
-------------------------------------------------------------------------------
-20170627 16:46:30.350 - INFO - +-- START TEARDOWN: Ubidy.Browser.Close [ ]
-20170627 16:46:30.350 - INFO - +--- START KW: Selenium2Library.Close Browser [ ]
-20170627 16:46:30.350 - DEBUG - Closing browser with session id e8f250683b6796099190b3a3487677af
-20170627 16:46:30.350 - DEBUG - DELETE http://127.0.0.1:64316/session/e8f250683b6796099190b3a3487677af {"sessionId": "e8f250683b6796099190b3a3487677af"}
-20170627 16:46:30.447 - DEBUG - Finished Request
-20170627 16:46:33.473 - INFO - +--- END KW: Selenium2Library.Close Browser (3122)
-20170627 16:46:33.473 - INFO - +-- END TEARDOWN: Ubidy.Browser.Close (3123)
-==============================================================================
-20170627 16:46:33.480 - INFO - +- END SUITE: Regression.3.CreateProject (5758)
-==============================================================================
-20170627 16:46:33.490 - INFO - +- START SUITE: Regression.4.CreateAccountAsAgency [ ]
-==============================================================================
-20170627 16:46:33.490 - INFO - +-- START TEST: Create Account as Agency [ ]
-------------------------------------------------------------------------------
-20170627 16:46:33.490 - INFO - +--- START KW: Register new agency [ ]
-20170627 16:46:33.490 - INFO - +---- START KW: String.Generate Random String [ ]
-20170627 16:46:33.490 - INFO - ${random.username} = hbbLGEMc
-20170627 16:46:33.490 - INFO - +---- END KW: String.Generate Random String (0)
-20170627 16:46:33.490 - INFO - +---- START KW: BuiltIn.Log To Console [ ${random.username} ]
-20170627 16:46:33.490 - INFO - +---- END KW: BuiltIn.Log To Console (0)
-20170627 16:46:33.490 - INFO - +---- START KW: Ubidy.Browser.Open [ ${USER} ]
-20170627 16:46:33.490 - INFO - +----- START KW: OperatingSystem.Set Environment Variable [ no_proxy | 127.0.0.1 ]
-20170627 16:46:33.490 - INFO - Environment variable 'no_proxy' set to value '127.0.0.1'.
-20170627 16:46:33.490 - INFO - +----- END KW: OperatingSystem.Set Environment Variable (0)
-20170627 16:46:33.490 - INFO - +----- START KW: OperatingSystem.Append To Environment Variable [ PATH | D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/ ]
-20170627 16:46:33.490 - INFO - Environment variable 'PATH' set to value 'C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Users\Jeffrey Givera\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Jeffrey Givera\AppData\Roaming\npm;C:\Python27\;C:\Python27\Scripts\;D:\Source\Repos\Ubidy_AutomationSuite\browser-driver\;D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/;D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/'.
-20170627 16:46:33.490 - INFO - +----- END KW: OperatingSystem.Append To Environment Variable (0)
-20170627 16:46:33.490 - INFO - +----- START KW: Ubidy.Browser.OpenChrome [ ]
-20170627 16:46:33.490 - INFO - +------ START KW: BuiltIn.Evaluate [ sys.modules['selenium.webdriver'].ChromeOptions() | sys, selenium.webdriver ]
-20170627 16:46:33.490 - INFO - ${chrome options} = <selenium.webdriver.chrome.options.Options object at 0x036108F0>
-20170627 16:46:33.490 - INFO - +------ END KW: BuiltIn.Evaluate (0)
-20170627 16:46:33.490 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-component-extensions-with-background-pages ]
-20170627 16:46:33.490 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:46:33.490 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | start-maximized ]
-20170627 16:46:33.490 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:46:33.490 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-extensions ]
-20170627 16:46:33.505 - INFO - +------ END KW: BuiltIn.Call Method (15)
-20170627 16:46:33.505 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | test-type ]
-20170627 16:46:33.505 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:46:33.505 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-infobars ]
-20170627 16:46:33.505 - INFO - +------ END KW: BuiltIn.Call Method (0)
-20170627 16:46:33.505 - INFO - +------ START KW: Selenium2Library.Create Webdriver [ Chrome | chrome_options=${chrome options} ]
-20170627 16:46:33.505 - INFO - Creating an instance of the Chrome WebDriver
-20170627 16:46:35.508 - DEBUG - POST http://127.0.0.1:64606/session {"capabilities": {"alwaysMatch": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-extensions", "test-type", "disable-infobars"], "extensions": []}}, "firstMatch": []}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-extensions", "test-type", "disable-infobars"], "extensions": []}}}
-20170627 16:46:36.888 - DEBUG - Finished Request
-20170627 16:46:36.889 - DEBUG - Created Chrome WebDriver instance with session id dc45a823c9a7696206cd8c9ac47159af
-20170627 16:46:36.889 - INFO - +------ END KW: Selenium2Library.Create Webdriver (3384)
-20170627 16:46:36.889 - INFO - +----- END KW: Ubidy.Browser.OpenChrome (3399)
-20170627 16:46:36.890 - INFO - +----- START KW: Selenium2Library.Set Selenium Implicit Wait [ ${Selenium.Timeout} ]
-20170627 16:46:36.890 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 120000.0}
-20170627 16:46:36.890 - DEBUG - Finished Request
-20170627 16:46:36.890 - INFO - +----- END KW: Selenium2Library.Set Selenium Implicit Wait (0)
-20170627 16:46:36.890 - INFO - +----- START KW: Selenium2Library.Set Selenium Timeout [ ${Selenium.Timeout} ]
-20170627 16:46:36.890 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 120000.0}
-20170627 16:46:36.890 - DEBUG - Finished Request
-20170627 16:46:36.890 - INFO - +----- END KW: Selenium2Library.Set Selenium Timeout (0)
-20170627 16:46:36.890 - INFO - +----- START KW: Ubidy.Browser.Init UBIDY [ ${USER} ]
-20170627 16:46:36.890 - INFO - +------ START KW: Selenium2Library.Delete All Cookies [ ]
-20170627 16:46:36.890 - DEBUG - DELETE http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/cookie {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:37.425 - DEBUG - Finished Request
-20170627 16:46:37.425 - INFO - +------ END KW: Selenium2Library.Delete All Cookies (535)
-20170627 16:46:37.425 - INFO - +------ START KW: Ubidy.Browser.Go To UBIDY [ ${USER} ]
-20170627 16:46:37.425 - INFO - +------- START KW: Selenium2Library.Get Location [ ]
-20170627 16:46:37.425 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/url {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:37.441 - DEBUG - Finished Request
-20170627 16:46:37.441 - INFO - ${Current.Location} = data:,
-20170627 16:46:37.441 - INFO - +------- END KW: Selenium2Library.Get Location (16)
-20170627 16:46:37.441 - INFO - +------- START KW: BuiltIn.Log Many [ ${Current.Location} ]
-20170627 16:46:37.441 - INFO - data:,
-20170627 16:46:37.441 - INFO - +------- END KW: BuiltIn.Log Many (0)
-20170627 16:46:37.441 - INFO - +------- START KW: BuiltIn.Log Many [ ${USER} ]
-20170627 16:46:37.441 - INFO - employer
-20170627 16:46:37.441 - INFO - +------- END KW: BuiltIn.Log Many (0)
-20170627 16:46:37.441 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='employer' | Selenium2Library.Go To | ${Employer.Url} ]
-20170627 16:46:37.441 - INFO - +-------- START KW: Selenium2Library.Go To [ ${Employer.Url} ]
-20170627 16:46:37.441 - INFO - Opening url 'http://employerdev.ubidywebsite.com:8081'
-20170627 16:46:37.441 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/url {"url": "http://employerdev.ubidywebsite.com:8081", "sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:40.020 - DEBUG - Finished Request
-20170627 16:46:40.021 - INFO - +-------- END KW: Selenium2Library.Go To (2580)
-20170627 16:46:40.022 - INFO - +------- END KW: BuiltIn.Run Keyword If (2580)
-20170627 16:46:40.022 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='agency' | Selenium2Library.Go To | ${Agency.Url} ]
-20170627 16:46:40.023 - INFO - +------- END KW: BuiltIn.Run Keyword If (1)
-20170627 16:46:40.024 - INFO - +------ END KW: Ubidy.Browser.Go To UBIDY (2599)
-20170627 16:46:40.024 - INFO - +------ START KW: Selenium2Library.Set Selenium Speed [ ${DELAY} ]
-20170627 16:46:40.025 - INFO - +------ END KW: Selenium2Library.Set Selenium Speed (1)
-20170627 16:46:40.025 - INFO - +------ START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:40.033 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:40.295 - DEBUG - Finished Request
-20170627 16:46:40.297 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-21.png"><img src="selenium-screenshot-21.png" width="800px"></a>
-20170627 16:46:40.298 - INFO - +------ END KW: Selenium2Library.Capture Page Screenshot (273)
-20170627 16:46:40.298 - INFO - +----- END KW: Ubidy.Browser.Init UBIDY (3408)
-20170627 16:46:40.298 - INFO - +---- END KW: Ubidy.Browser.Open (6808)
-20170627 16:46:40.298 - INFO - +---- START KW: Selenium2Library.Click Link [ ${Register.Link} ]
-20170627 16:46:40.298 - INFO - Clicking link '//*[@href="/Register"]'.
-20170627 16:46:40.299 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@href=\"/Register\"]"}
-20170627 16:46:40.318 - DEBUG - Finished Request
-20170627 16:46:40.319 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-1/name {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-1"}
-20170627 16:46:40.324 - DEBUG - Finished Request
-20170627 16:46:40.325 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-1/click {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-1"}
-20170627 16:46:40.407 - DEBUG - Finished Request
-20170627 16:46:40.409 - INFO - +---- END KW: Selenium2Library.Click Link (111)
-20170627 16:46:40.409 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 5 ]
-20170627 16:46:40.409 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 5000.0}
-20170627 16:46:40.412 - DEBUG - Finished Request
-20170627 16:46:40.413 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:46:40.414 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 5 ]
-20170627 16:46:40.415 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 5000.0}
-20170627 16:46:40.417 - DEBUG - Finished Request
-20170627 16:46:40.418 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (4)
-20170627 16:46:40.418 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Login.Username.Text} | agency_${random.username} ]
-20170627 16:46:40.419 - INFO - Typing text 'agency_hbbLGEMc' into text field 'id=userName'
-20170627 16:46:40.419 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "userName"}
-20170627 16:46:40.657 - DEBUG - Finished Request
-20170627 16:46:40.659 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-2/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-2"}
-20170627 16:46:40.680 - DEBUG - Finished Request
-20170627 16:46:40.682 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-2/value {"text": "agency_hbbLGEMc", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-2", "value": ["a", "g", "e", "n", "c", "y", "_", "h", "b", "b", "L", "G", "E", "M", "c"]}
-20170627 16:46:40.883 - DEBUG - Finished Request
-20170627 16:46:40.884 - INFO - +---- END KW: Selenium2Library.Input Text (466)
-20170627 16:46:40.884 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.CompanyName.Text} | agency_${random.username} ]
-20170627 16:46:40.884 - INFO - Typing text 'agency_hbbLGEMc' into text field 'id=companyName'
-20170627 16:46:40.884 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "companyName"}
-20170627 16:46:40.901 - DEBUG - Finished Request
-20170627 16:46:40.902 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-3/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-3"}
-20170627 16:46:40.928 - DEBUG - Finished Request
-20170627 16:46:40.929 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-3/value {"text": "agency_hbbLGEMc", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-3", "value": ["a", "g", "e", "n", "c", "y", "_", "h", "b", "b", "L", "G", "E", "M", "c"]}
-20170627 16:46:41.145 - DEBUG - Finished Request
-20170627 16:46:41.146 - INFO - +---- END KW: Selenium2Library.Input Text (262)
-20170627 16:46:41.146 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.FirstName.Text} | agency_${random.username} ]
-20170627 16:46:41.147 - INFO - Typing text 'agency_hbbLGEMc' into text field 'id=firstName'
-20170627 16:46:41.147 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "firstName"}
-20170627 16:46:41.165 - DEBUG - Finished Request
-20170627 16:46:41.167 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-4/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-4"}
-20170627 16:46:41.189 - DEBUG - Finished Request
-20170627 16:46:41.190 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-4/value {"text": "agency_hbbLGEMc", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-4", "value": ["a", "g", "e", "n", "c", "y", "_", "h", "b", "b", "L", "G", "E", "M", "c"]}
-20170627 16:46:41.437 - DEBUG - Finished Request
-20170627 16:46:41.438 - INFO - +---- END KW: Selenium2Library.Input Text (292)
-20170627 16:46:41.438 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.LastName.Text} | agency_${random.username} ]
-20170627 16:46:41.438 - INFO - Typing text 'agency_hbbLGEMc' into text field 'id=lastName'
-20170627 16:46:41.439 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "lastName"}
-20170627 16:46:41.456 - DEBUG - Finished Request
-20170627 16:46:41.457 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-5/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-5"}
-20170627 16:46:41.479 - DEBUG - Finished Request
-20170627 16:46:41.480 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-5/value {"text": "agency_hbbLGEMc", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-5", "value": ["a", "g", "e", "n", "c", "y", "_", "h", "b", "b", "L", "G", "E", "M", "c"]}
-20170627 16:46:41.679 - DEBUG - Finished Request
-20170627 16:46:41.680 - INFO - +---- END KW: Selenium2Library.Input Text (242)
-20170627 16:46:41.680 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.Email.Text} | agency_${random.username}@ubidy.com ]
-20170627 16:46:41.681 - INFO - Typing text 'agency_hbbLGEMc@ubidy.com' into text field 'id=email'
-20170627 16:46:41.681 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "email"}
-20170627 16:46:41.700 - DEBUG - Finished Request
-20170627 16:46:41.701 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-6/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-6"}
-20170627 16:46:41.721 - DEBUG - Finished Request
-20170627 16:46:41.723 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-6/value {"text": "agency_hbbLGEMc@ubidy.com", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-6", "value": ["a", "g", "e", "n", "c", "y", "_", "h", "b", "b", "L", "G", "E", "M", "c", "@", "u", "b", "i", "d", "y", ".", "c", "o", "m"]}
-20170627 16:46:42.017 - DEBUG - Finished Request
-20170627 16:46:42.019 - INFO - +---- END KW: Selenium2Library.Input Text (339)
-20170627 16:46:42.019 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Login.Password.Text} | ubidy123 ]
-20170627 16:46:42.019 - INFO - Typing text 'ubidy123' into text field 'id=password'
-20170627 16:46:42.019 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "id", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "password"}
-20170627 16:46:42.035 - DEBUG - Finished Request
-20170627 16:46:42.037 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-7/clear {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-7"}
-20170627 16:46:42.057 - DEBUG - Finished Request
-20170627 16:46:42.058 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-7/value {"text": "ubidy123", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-7", "value": ["u", "b", "i", "d", "y", "1", "2", "3"]}
-20170627 16:46:42.179 - DEBUG - Finished Request
-20170627 16:46:42.180 - INFO - +---- END KW: Selenium2Library.Input Text (161)
-20170627 16:46:42.180 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.IAgree.Checkbox} ]
-20170627 16:46:42.180 - INFO - Clicking element '//*[@class="ant-checkbox-input"]'.
-20170627 16:46:42.180 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-checkbox-input\"]"}
-20170627 16:46:42.197 - DEBUG - Finished Request
-20170627 16:46:42.198 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-8/click {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-8"}
-20170627 16:46:42.252 - DEBUG - Finished Request
-20170627 16:46:42.253 - INFO - +---- END KW: Selenium2Library.Click Element (73)
-20170627 16:46:42.253 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:42.261 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:42.530 - DEBUG - Finished Request
-20170627 16:46:42.534 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-22.png"><img src="selenium-screenshot-22.png" width="800px"></a>
-20170627 16:46:42.534 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (281)
-20170627 16:46:42.534 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.Submit.Button} ]
-20170627 16:46:42.535 - INFO - Clicking element '//*[@type="submit"]'.
-20170627 16:46:42.535 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"submit\"]"}
-20170627 16:46:42.556 - DEBUG - Finished Request
-20170627 16:46:42.558 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-9/click {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-9"}
-20170627 16:46:42.633 - DEBUG - Finished Request
-20170627 16:46:42.634 - INFO - +---- END KW: Selenium2Library.Click Element (100)
-20170627 16:46:42.635 - INFO - +---- START KW: Selenium2Library.Wait Until Element Is Visible [ ${Registration.No.Button} ]
-20170627 16:46:42.635 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-modal-footer\"]/button[1]"}
-20170627 16:46:42.655 - DEBUG - Finished Request
-20170627 16:46:42.657 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-10/displayed {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-10"}
-20170627 16:46:42.679 - DEBUG - Finished Request
-20170627 16:46:42.681 - INFO - +---- END KW: Selenium2Library.Wait Until Element Is Visible (47)
-20170627 16:46:42.681 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.UserName.Label} | Username: agency_${random.username} ]
-20170627 16:46:42.681 - INFO - Verifying element '//*[@class="information-preview"]/p[1]' contains text 'Username: agency_hbbLGEMc'.
-20170627 16:46:42.681 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"information-preview\"]/p[1]"}
-20170627 16:46:42.700 - DEBUG - Finished Request
-20170627 16:46:42.701 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-11/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-11"}
-20170627 16:46:42.722 - DEBUG - Finished Request
-20170627 16:46:42.723 - INFO - +---- END KW: Selenium2Library.Element Should Contain (42)
-20170627 16:46:42.724 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.EmployerName.Label} | Employer Name: agency_${random.username} ]
-20170627 16:46:42.724 - INFO - Verifying element '//*[@class="information-preview"]/p[2]' contains text 'Employer Name: agency_hbbLGEMc'.
-20170627 16:46:42.725 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"information-preview\"]/p[2]"}
-20170627 16:46:42.748 - DEBUG - Finished Request
-20170627 16:46:42.749 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-12/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-12"}
-20170627 16:46:42.770 - DEBUG - Finished Request
-20170627 16:46:42.771 - INFO - +---- END KW: Selenium2Library.Element Should Contain (47)
-20170627 16:46:42.771 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.FirstName.Label} | First Name: agency_${random.username} ]
-20170627 16:46:42.771 - INFO - Verifying element '//*[@class="information-preview"]/p[3]' contains text 'First Name: agency_hbbLGEMc'.
-20170627 16:46:42.772 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"information-preview\"]/p[3]"}
-20170627 16:46:42.793 - DEBUG - Finished Request
-20170627 16:46:42.795 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-13/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-13"}
-20170627 16:46:42.815 - DEBUG - Finished Request
-20170627 16:46:42.816 - INFO - +---- END KW: Selenium2Library.Element Should Contain (45)
-20170627 16:46:42.816 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.LastName.Label} | Last Name: agency_${random.username} ]
-20170627 16:46:42.816 - INFO - Verifying element '//*[@class="information-preview"]/p[4]' contains text 'Last Name: agency_hbbLGEMc'.
-20170627 16:46:42.816 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"information-preview\"]/p[4]"}
-20170627 16:46:42.835 - DEBUG - Finished Request
-20170627 16:46:42.837 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-14/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-14"}
-20170627 16:46:42.861 - DEBUG - Finished Request
-20170627 16:46:42.862 - INFO - +---- END KW: Selenium2Library.Element Should Contain (46)
-20170627 16:46:42.862 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.Email.Label} | Email: agency_${random.username}@ubidy.com ]
-20170627 16:46:42.863 - INFO - Verifying element '//*[@class="information-preview"]/p[5]' contains text 'Email: agency_hbbLGEMc@ubidy.com'.
-20170627 16:46:42.863 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"information-preview\"]/p[5]"}
-20170627 16:46:42.883 - DEBUG - Finished Request
-20170627 16:46:42.885 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-15/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-15"}
-20170627 16:46:42.905 - DEBUG - Finished Request
-20170627 16:46:42.906 - INFO - +---- END KW: Selenium2Library.Element Should Contain (44)
-20170627 16:46:42.906 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.Alert.Message} | Are you sure you want to register with these information? ]
-20170627 16:46:42.907 - INFO - Verifying element '//*[@class="ant-alert-message"]' contains text 'Are you sure you want to register with these information?'.
-20170627 16:46:42.907 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-alert-message\"]"}
-20170627 16:46:42.928 - DEBUG - Finished Request
-20170627 16:46:42.929 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-16/text {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-16"}
-20170627 16:46:42.949 - DEBUG - Finished Request
-20170627 16:46:42.951 - INFO - +---- END KW: Selenium2Library.Element Should Contain (45)
-20170627 16:46:42.951 - INFO - +---- START KW: Selenium2Library.Wait Until Element Is Visible [ ${Registration.Yes.Button} ]
-20170627 16:46:42.952 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
-20170627 16:46:42.969 - DEBUG - Finished Request
-20170627 16:46:42.971 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-17/displayed {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-17"}
-20170627 16:46:42.990 - DEBUG - Finished Request
-20170627 16:46:42.993 - INFO - +---- END KW: Selenium2Library.Wait Until Element Is Visible (42)
-20170627 16:46:42.993 - INFO - +---- START KW: Selenium2Library.Element Should Be Enabled [ ${Registration.No.Button} ]
-20170627 16:46:42.994 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-modal-footer\"]/button[1]"}
-20170627 16:46:43.002 - DEBUG - Finished Request
-20170627 16:46:43.003 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-10/name {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-10"}
-20170627 16:46:43.008 - DEBUG - Finished Request
-20170627 16:46:43.010 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-10/enabled {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-10"}
-20170627 16:46:43.021 - DEBUG - Finished Request
-20170627 16:46:43.023 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-10/attribute/readonly {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "name": "readonly", "id": "0.9907183801361623-10"}
-20170627 16:46:43.031 - DEBUG - Finished Request
-20170627 16:46:43.032 - INFO - +---- END KW: Selenium2Library.Element Should Be Enabled (39)
-20170627 16:46:43.032 - INFO - +---- START KW: Selenium2Library.Element Should Be Enabled [ ${Registration.Yes.Button} ]
-20170627 16:46:43.032 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
-20170627 16:46:43.042 - DEBUG - Finished Request
-20170627 16:46:43.043 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-17/name {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-17"}
-20170627 16:46:43.047 - DEBUG - Finished Request
-20170627 16:46:43.049 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-17/enabled {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-17"}
-20170627 16:46:43.063 - DEBUG - Finished Request
-20170627 16:46:43.064 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-17/attribute/readonly {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "name": "readonly", "id": "0.9907183801361623-17"}
-20170627 16:46:43.072 - DEBUG - Finished Request
-20170627 16:46:43.073 - INFO - +---- END KW: Selenium2Library.Element Should Be Enabled (41)
-20170627 16:46:43.073 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:43.079 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:43.340 - DEBUG - Finished Request
-20170627 16:46:43.344 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-23.png"><img src="selenium-screenshot-23.png" width="800px"></a>
-20170627 16:46:43.344 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (271)
-20170627 16:46:43.344 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.Yes.Button} ]
-20170627 16:46:43.345 - INFO - Clicking element '//*[@class="ant-modal-footer"]/button[2]'.
-20170627 16:46:43.345 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
-20170627 16:46:43.354 - DEBUG - Finished Request
-20170627 16:46:43.355 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/element/0.9907183801361623-17/click {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "id": "0.9907183801361623-17"}
-20170627 16:46:43.410 - DEBUG - Finished Request
-20170627 16:46:43.411 - INFO - +---- END KW: Selenium2Library.Click Element (67)
-20170627 16:46:43.411 - INFO - +---- START KW: BuiltIn.Run Keyword And Return Status [ Element Should Be Visible | //*[@class="ant-message-notice"] ]
-20170627 16:46:43.412 - INFO - +----- START KW: Selenium2Library.Element Should Be Visible [ //*[@class="ant-message-notice"] ]
-20170627 16:46:43.413 - INFO - Verifying element '//*[@class="ant-message-notice"]' is visible.
-20170627 16:46:43.413 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@class=\"ant-message-notice\"]"}
-20170627 16:46:48.430 - DEBUG - Finished Request
-20170627 16:46:48.431 - INFO - +------ START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:48.437 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:48.706 - DEBUG - Finished Request
-20170627 16:46:48.709 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-24.png"><img src="selenium-screenshot-24.png" width="800px"></a>
-20170627 16:46:48.709 - INFO - +------ END KW: Selenium2Library.Capture Page Screenshot (278)
-20170627 16:46:48.710 - FAIL - The element '//*[@class="ant-message-notice"]' should be visible, but it is not.
-20170627 16:46:48.710 - DEBUG - Traceback (most recent call last):
+20170712 11:54:31.449 - INFO - +--- START KW: Register new employer [ ]
+20170712 11:54:31.449 - INFO - +---- START KW: String.Generate Random String [ ]
+20170712 11:54:31.449 - INFO - ${random.username} = fpTFm06q
+20170712 11:54:31.449 - INFO - +---- END KW: String.Generate Random String (0)
+20170712 11:54:31.449 - INFO - +---- START KW: BuiltIn.Log To Console [ ${random.username} ]
+20170712 11:54:31.449 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20170712 11:54:31.449 - INFO - +---- START KW: Ubidy.Browser.Open [ ${USER} ]
+20170712 11:54:31.449 - INFO - +----- START KW: OperatingSystem.Set Environment Variable [ no_proxy | 127.0.0.1 ]
+20170712 11:54:31.449 - INFO - Environment variable 'no_proxy' set to value '127.0.0.1'.
+20170712 11:54:31.449 - INFO - +----- END KW: OperatingSystem.Set Environment Variable (0)
+20170712 11:54:31.449 - INFO - +----- START KW: OperatingSystem.Append To Environment Variable [ PATH | D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/ ]
+20170712 11:54:31.449 - INFO - Environment variable 'PATH' set to value 'C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Users\Jeffrey Givera\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Jeffrey Givera\AppData\Roaming\npm;C:\Python27\;C:\Python27\Scripts\;D:\Source\Repos\Ubidy_AutomationSuite\browser-driver\;D:/Source/Repos/Ubidy_EmployerAutomationSuite/browser-driver/'.
+20170712 11:54:31.449 - INFO - +----- END KW: OperatingSystem.Append To Environment Variable (0)
+20170712 11:54:31.449 - INFO - +----- START KW: Ubidy.Browser.OpenChrome [ ]
+20170712 11:54:31.449 - INFO - +------ START KW: BuiltIn.Evaluate [ sys.modules['selenium.webdriver'].ChromeOptions() | sys, selenium.webdriver ]
+20170712 11:54:31.449 - INFO - ${chrome options} = <selenium.webdriver.chrome.options.Options object at 0x03AD6090>
+20170712 11:54:31.449 - INFO - +------ END KW: BuiltIn.Evaluate (0)
+20170712 11:54:31.449 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-component-extensions-with-background-pages ]
+20170712 11:54:31.449 - INFO - +------ END KW: BuiltIn.Call Method (0)
+20170712 11:54:31.449 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | start-maximized ]
+20170712 11:54:31.449 - INFO - +------ END KW: BuiltIn.Call Method (0)
+20170712 11:54:31.449 - INFO - +------ START KW: BuiltIn.Call Method [ ${chrome options} | add_argument | disable-infobars ]
+20170712 11:54:31.449 - INFO - +------ END KW: BuiltIn.Call Method (0)
+20170712 11:54:31.449 - INFO - +------ START KW: Selenium2Library.Create Webdriver [ Chrome | chrome_options=${chrome options} ]
+20170712 11:54:31.449 - INFO - Creating an instance of the Chrome WebDriver
+20170712 11:54:33.479 - DEBUG - POST http://127.0.0.1:62176/session {"capabilities": {"alwaysMatch": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-infobars"], "extensions": []}}, "firstMatch": []}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"args": ["disable-component-extensions-with-background-pages", "start-maximized", "disable-infobars"], "extensions": []}}}
+20170712 11:54:34.852 - DEBUG - Finished Request
+20170712 11:54:34.852 - DEBUG - Created Chrome WebDriver instance with session id f254a66f2916f40cc1ebd7820c1cb4ff
+20170712 11:54:34.852 - INFO - +------ END KW: Selenium2Library.Create Webdriver (3403)
+20170712 11:54:34.852 - INFO - +----- END KW: Ubidy.Browser.OpenChrome (3403)
+20170712 11:54:34.852 - INFO - +----- START KW: Selenium2Library.Set Selenium Implicit Wait [ ${Selenium.Timeout} ]
+20170712 11:54:34.852 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/timeouts/implicit_wait {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "ms": 2000.0}
+20170712 11:54:34.852 - DEBUG - Finished Request
+20170712 11:54:34.852 - INFO - +----- END KW: Selenium2Library.Set Selenium Implicit Wait (0)
+20170712 11:54:34.852 - INFO - +----- START KW: Selenium2Library.Set Selenium Timeout [ ${Selenium.Timeout} ]
+20170712 11:54:34.852 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/timeouts/async_script {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "ms": 2000.0}
+20170712 11:54:34.868 - DEBUG - Finished Request
+20170712 11:54:34.868 - INFO - +----- END KW: Selenium2Library.Set Selenium Timeout (16)
+20170712 11:54:34.868 - INFO - +----- START KW: Ubidy.Browser.Init UBIDY [ ${USER} ]
+20170712 11:54:34.868 - INFO - +------ START KW: Selenium2Library.Delete All Cookies [ ]
+20170712 11:54:34.868 - DEBUG - DELETE http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/cookie {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:35.452 - DEBUG - Finished Request
+20170712 11:54:35.452 - INFO - +------ END KW: Selenium2Library.Delete All Cookies (584)
+20170712 11:54:35.452 - INFO - +------ START KW: Ubidy.Browser.Go To UBIDY [ ${USER} ]
+20170712 11:54:35.452 - INFO - +------- START KW: Selenium2Library.Get Location [ ]
+20170712 11:54:35.468 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/url {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:35.468 - DEBUG - Finished Request
+20170712 11:54:35.483 - INFO - ${Current.Location} = data:,
+20170712 11:54:35.483 - INFO - +------- END KW: Selenium2Library.Get Location (31)
+20170712 11:54:35.483 - INFO - +------- START KW: BuiltIn.Log Many [ ${Current.Location} ]
+20170712 11:54:35.483 - INFO - data:,
+20170712 11:54:35.483 - INFO - +------- END KW: BuiltIn.Log Many (0)
+20170712 11:54:35.483 - INFO - +------- START KW: BuiltIn.Log Many [ ${USER} ]
+20170712 11:54:35.483 - INFO - employer
+20170712 11:54:35.483 - INFO - +------- END KW: BuiltIn.Log Many (0)
+20170712 11:54:35.483 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='employer' | Selenium2Library.Go To | ${Employer.Url} ]
+20170712 11:54:35.483 - INFO - +-------- START KW: Selenium2Library.Go To [ ${Employer.Url} ]
+20170712 11:54:35.483 - INFO - Opening url 'http://employerdev.ubidywebsite.com:8081'
+20170712 11:54:35.483 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/url {"url": "http://employerdev.ubidywebsite.com:8081", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:39.135 - DEBUG - Finished Request
+20170712 11:54:39.136 - INFO - +-------- END KW: Selenium2Library.Go To (3653)
+20170712 11:54:39.136 - INFO - +------- END KW: BuiltIn.Run Keyword If (3653)
+20170712 11:54:39.136 - INFO - +------- START KW: BuiltIn.Run Keyword If [ '${USER}'=='agency' | Selenium2Library.Go To | ${Agency.Url} ]
+20170712 11:54:39.137 - INFO - +------- END KW: BuiltIn.Run Keyword If (1)
+20170712 11:54:39.138 - INFO - +------ END KW: Ubidy.Browser.Go To UBIDY (3686)
+20170712 11:54:39.138 - INFO - +------ START KW: Selenium2Library.Set Selenium Speed [ ${DELAY} ]
+20170712 11:54:39.139 - INFO - +------ END KW: Selenium2Library.Set Selenium Speed (1)
+20170712 11:54:39.140 - INFO - +------ START KW: Selenium2Library.Capture Page Screenshot [ ]
+20170712 11:54:39.148 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/screenshot {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:39.436 - DEBUG - Finished Request
+20170712 11:54:39.447 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-1.png"><img src="selenium-screenshot-1.png" width="800px"></a>
+20170712 11:54:39.447 - INFO - +------ END KW: Selenium2Library.Capture Page Screenshot (308)
+20170712 11:54:39.448 - INFO - +----- END KW: Ubidy.Browser.Init UBIDY (4580)
+20170712 11:54:39.448 - INFO - +---- END KW: Ubidy.Browser.Open (7999)
+20170712 11:54:39.448 - INFO - +---- START KW: Selenium2Library.Click Link [ ${Register.Link} ]
+20170712 11:54:39.448 - INFO - Clicking link '//*[@href="/Register"]'.
+20170712 11:54:39.449 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@href=\"/Register\"]"}
+20170712 11:54:39.466 - DEBUG - Finished Request
+20170712 11:54:39.477 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-1/name {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-1"}
+20170712 11:54:39.490 - DEBUG - Finished Request
+20170712 11:54:39.500 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-1/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-1"}
+20170712 11:54:39.578 - DEBUG - Finished Request
+20170712 11:54:39.588 - INFO - +---- END KW: Selenium2Library.Click Link (140)
+20170712 11:54:39.589 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Login.Username.Text} | employee_${random.username} ]
+20170712 11:54:39.589 - INFO - Typing text 'employee_fpTFm06q' into text field 'id=userName'
+20170712 11:54:39.590 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "userName"}
+20170712 11:54:39.781 - DEBUG - Finished Request
+20170712 11:54:39.791 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-2/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-2"}
+20170712 11:54:39.812 - DEBUG - Finished Request
+20170712 11:54:39.822 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-2/value {"text": "employee_fpTFm06q", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-2", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "f", "p", "T", "F", "m", "0", "6", "q"]}
+20170712 11:54:40.033 - DEBUG - Finished Request
+20170712 11:54:40.043 - INFO - +---- END KW: Selenium2Library.Input Text (454)
+20170712 11:54:40.044 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.CompanyName.Text} | employee_${random.username} ]
+20170712 11:54:40.044 - INFO - Typing text 'employee_fpTFm06q' into text field 'id=companyName'
+20170712 11:54:40.045 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "companyName"}
+20170712 11:54:40.063 - DEBUG - Finished Request
+20170712 11:54:40.074 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-3/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-3"}
+20170712 11:54:40.107 - DEBUG - Finished Request
+20170712 11:54:40.117 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-3/value {"text": "employee_fpTFm06q", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-3", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "f", "p", "T", "F", "m", "0", "6", "q"]}
+20170712 11:54:40.434 - DEBUG - Finished Request
+20170712 11:54:40.444 - INFO - +---- END KW: Selenium2Library.Input Text (400)
+20170712 11:54:40.444 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.FirstName.Text} | employee_${random.username} ]
+20170712 11:54:40.444 - INFO - Typing text 'employee_fpTFm06q' into text field 'id=firstName'
+20170712 11:54:40.445 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "firstName"}
+20170712 11:54:40.463 - DEBUG - Finished Request
+20170712 11:54:40.473 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-4/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-4"}
+20170712 11:54:40.496 - DEBUG - Finished Request
+20170712 11:54:40.507 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-4/value {"text": "employee_fpTFm06q", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-4", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "f", "p", "T", "F", "m", "0", "6", "q"]}
+20170712 11:54:40.771 - DEBUG - Finished Request
+20170712 11:54:40.781 - INFO - +---- END KW: Selenium2Library.Input Text (337)
+20170712 11:54:40.781 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.LastName.Text} | employee_${random.username} ]
+20170712 11:54:40.781 - INFO - Typing text 'employee_fpTFm06q' into text field 'id=lastName'
+20170712 11:54:40.782 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "lastName"}
+20170712 11:54:40.799 - DEBUG - Finished Request
+20170712 11:54:40.809 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-5/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-5"}
+20170712 11:54:40.829 - DEBUG - Finished Request
+20170712 11:54:40.839 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-5/value {"text": "employee_fpTFm06q", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-5", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "f", "p", "T", "F", "m", "0", "6", "q"]}
+20170712 11:54:41.062 - DEBUG - Finished Request
+20170712 11:54:41.073 - INFO - +---- END KW: Selenium2Library.Input Text (292)
+20170712 11:54:41.073 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Registration.Email.Text} | employee_${random.username}@ubidy.com ]
+20170712 11:54:41.073 - INFO - Typing text 'employee_fpTFm06q@ubidy.com' into text field 'id=email'
+20170712 11:54:41.074 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "email"}
+20170712 11:54:41.090 - DEBUG - Finished Request
+20170712 11:54:41.101 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-6/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-6"}
+20170712 11:54:41.127 - DEBUG - Finished Request
+20170712 11:54:41.137 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-6/value {"text": "employee_fpTFm06q@ubidy.com", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-6", "value": ["e", "m", "p", "l", "o", "y", "e", "e", "_", "f", "p", "T", "F", "m", "0", "6", "q", "@", "u", "b", "i", "d", "y", ".", "c", "o", "m"]}
+20170712 11:54:41.475 - DEBUG - Finished Request
+20170712 11:54:41.485 - INFO - +---- END KW: Selenium2Library.Input Text (412)
+20170712 11:54:41.486 - INFO - +---- START KW: Selenium2Library.Input Text [ ${Login.Password.Text} | ubidy123 ]
+20170712 11:54:41.487 - INFO - Typing text 'ubidy123' into text field 'id=password'
+20170712 11:54:41.487 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "password"}
+20170712 11:54:41.509 - DEBUG - Finished Request
+20170712 11:54:41.519 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-7/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-7"}
+20170712 11:54:41.540 - DEBUG - Finished Request
+20170712 11:54:41.551 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-7/value {"text": "ubidy123", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-7", "value": ["u", "b", "i", "d", "y", "1", "2", "3"]}
+20170712 11:54:41.665 - DEBUG - Finished Request
+20170712 11:54:41.676 - INFO - +---- END KW: Selenium2Library.Input Text (190)
+20170712 11:54:41.676 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.IAgree.Checkbox} ]
+20170712 11:54:41.676 - INFO - Clicking element '//*[@class="ant-checkbox-input"]'.
+20170712 11:54:41.676 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-checkbox-input\"]"}
+20170712 11:54:41.694 - DEBUG - Finished Request
+20170712 11:54:41.705 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-8/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-8"}
+20170712 11:54:41.764 - DEBUG - Finished Request
+20170712 11:54:41.774 - INFO - +---- END KW: Selenium2Library.Click Element (98)
+20170712 11:54:41.774 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
+20170712 11:54:41.780 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/screenshot {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:42.042 - DEBUG - Finished Request
+20170712 11:54:42.056 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-2.png"><img src="selenium-screenshot-2.png" width="800px"></a>
+20170712 11:54:42.057 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (283)
+20170712 11:54:42.058 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.Submit.Button} ]
+20170712 11:54:42.058 - INFO - Clicking element '//*[@type="submit"]'.
+20170712 11:54:42.058 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"submit\"]"}
+20170712 11:54:42.078 - DEBUG - Finished Request
+20170712 11:54:42.089 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-9/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-9"}
+20170712 11:54:42.161 - DEBUG - Finished Request
+20170712 11:54:42.171 - INFO - +---- END KW: Selenium2Library.Click Element (114)
+20170712 11:54:42.171 - INFO - +---- START KW: Selenium2Library.Wait Until Element Is Visible [ ${Registration.No.Button} ]
+20170712 11:54:42.171 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[1]"}
+20170712 11:54:42.192 - DEBUG - Finished Request
+20170712 11:54:42.202 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-10/displayed {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-10"}
+20170712 11:54:42.224 - DEBUG - Finished Request
+20170712 11:54:42.434 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[1]"}
+20170712 11:54:42.444 - DEBUG - Finished Request
+20170712 11:54:42.454 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-10/displayed {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-10"}
+20170712 11:54:42.462 - DEBUG - Finished Request
+20170712 11:54:42.472 - INFO - +---- END KW: Selenium2Library.Wait Until Element Is Visible (301)
+20170712 11:54:42.472 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.UserName.Label} | Username: employee_${random.username} ]
+20170712 11:54:42.473 - INFO - Verifying element '//*[@class="information-preview"]/p[1]' contains text 'Username: employee_fpTFm06q'.
+20170712 11:54:42.473 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"information-preview\"]/p[1]"}
+20170712 11:54:42.490 - DEBUG - Finished Request
+20170712 11:54:42.501 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-11/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-11"}
+20170712 11:54:42.525 - DEBUG - Finished Request
+20170712 11:54:42.535 - INFO - +---- END KW: Selenium2Library.Element Should Contain (63)
+20170712 11:54:42.536 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.EmployerName.Label} | Employer Name: employee_${random.username} ]
+20170712 11:54:42.537 - INFO - Verifying element '//*[@class="information-preview"]/p[2]' contains text 'Employer Name: employee_fpTFm06q'.
+20170712 11:54:42.538 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"information-preview\"]/p[2]"}
+20170712 11:54:42.558 - DEBUG - Finished Request
+20170712 11:54:42.568 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-12/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-12"}
+20170712 11:54:42.590 - DEBUG - Finished Request
+20170712 11:54:42.601 - INFO - +---- END KW: Selenium2Library.Element Should Contain (65)
+20170712 11:54:42.601 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.FirstName.Label} | First Name: employee_${random.username} ]
+20170712 11:54:42.602 - INFO - Verifying element '//*[@class="information-preview"]/p[3]' contains text 'First Name: employee_fpTFm06q'.
+20170712 11:54:42.602 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"information-preview\"]/p[3]"}
+20170712 11:54:42.620 - DEBUG - Finished Request
+20170712 11:54:42.631 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-13/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-13"}
+20170712 11:54:42.648 - DEBUG - Finished Request
+20170712 11:54:42.659 - INFO - +---- END KW: Selenium2Library.Element Should Contain (58)
+20170712 11:54:42.659 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.LastName.Label} | Last Name: employee_${random.username} ]
+20170712 11:54:42.661 - INFO - Verifying element '//*[@class="information-preview"]/p[4]' contains text 'Last Name: employee_fpTFm06q'.
+20170712 11:54:42.661 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"information-preview\"]/p[4]"}
+20170712 11:54:42.679 - DEBUG - Finished Request
+20170712 11:54:42.690 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-14/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-14"}
+20170712 11:54:42.710 - DEBUG - Finished Request
+20170712 11:54:42.720 - INFO - +---- END KW: Selenium2Library.Element Should Contain (61)
+20170712 11:54:42.720 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.Email.Label} | Email: employee_${random.username}@ubidy.com ]
+20170712 11:54:42.720 - INFO - Verifying element '//*[@class="information-preview"]/p[5]' contains text 'Email: employee_fpTFm06q@ubidy.com'.
+20170712 11:54:42.721 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"information-preview\"]/p[5]"}
+20170712 11:54:42.738 - DEBUG - Finished Request
+20170712 11:54:42.749 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-15/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-15"}
+20170712 11:54:42.768 - DEBUG - Finished Request
+20170712 11:54:42.778 - INFO - +---- END KW: Selenium2Library.Element Should Contain (58)
+20170712 11:54:42.779 - INFO - +---- START KW: Selenium2Library.Element Should Contain [ ${Registration.Alert.Message} | Are you sure you want to register with these information? ]
+20170712 11:54:42.780 - INFO - Verifying element '//*[@class="ant-alert-message"]' contains text 'Are you sure you want to register with these information?'.
+20170712 11:54:42.780 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-alert-message\"]"}
+20170712 11:54:42.804 - DEBUG - Finished Request
+20170712 11:54:42.815 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-16/text {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-16"}
+20170712 11:54:42.853 - DEBUG - Finished Request
+20170712 11:54:42.863 - INFO - +---- END KW: Selenium2Library.Element Should Contain (84)
+20170712 11:54:42.864 - INFO - +---- START KW: Selenium2Library.Wait Until Element Is Visible [ ${Registration.Yes.Button} ]
+20170712 11:54:42.864 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
+20170712 11:54:42.892 - DEBUG - Finished Request
+20170712 11:54:42.903 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-17/displayed {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-17"}
+20170712 11:54:42.925 - DEBUG - Finished Request
+20170712 11:54:42.935 - INFO - +---- END KW: Selenium2Library.Wait Until Element Is Visible (72)
+20170712 11:54:42.935 - INFO - +---- START KW: Selenium2Library.Element Should Be Enabled [ ${Registration.No.Button} ]
+20170712 11:54:42.936 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[1]"}
+20170712 11:54:42.943 - DEBUG - Finished Request
+20170712 11:54:42.953 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-10/name {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-10"}
+20170712 11:54:42.959 - DEBUG - Finished Request
+20170712 11:54:42.969 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-10/enabled {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-10"}
+20170712 11:54:42.981 - DEBUG - Finished Request
+20170712 11:54:42.991 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-10/attribute/readonly {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "name": "readonly", "id": "0.8669264611862044-10"}
+20170712 11:54:42.997 - DEBUG - Finished Request
+20170712 11:54:43.007 - INFO - +---- END KW: Selenium2Library.Element Should Be Enabled (72)
+20170712 11:54:43.008 - INFO - +---- START KW: Selenium2Library.Element Should Be Enabled [ ${Registration.Yes.Button} ]
+20170712 11:54:43.009 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
+20170712 11:54:43.031 - DEBUG - Finished Request
+20170712 11:54:43.041 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-17/name {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-17"}
+20170712 11:54:43.046 - DEBUG - Finished Request
+20170712 11:54:43.056 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-17/enabled {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-17"}
+20170712 11:54:43.067 - DEBUG - Finished Request
+20170712 11:54:43.078 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-17/attribute/readonly {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "name": "readonly", "id": "0.8669264611862044-17"}
+20170712 11:54:43.086 - DEBUG - Finished Request
+20170712 11:54:43.096 - INFO - +---- END KW: Selenium2Library.Element Should Be Enabled (88)
+20170712 11:54:43.096 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
+20170712 11:54:43.102 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/screenshot {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:43.376 - DEBUG - Finished Request
+20170712 11:54:43.388 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-3.png"><img src="selenium-screenshot-3.png" width="800px"></a>
+20170712 11:54:43.389 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (293)
+20170712 11:54:43.389 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Registration.Yes.Button} ]
+20170712 11:54:43.389 - INFO - Clicking element '//*[@class="ant-modal-footer"]/button[2]'.
+20170712 11:54:43.389 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-modal-footer\"]/button[2]"}
+20170712 11:54:43.397 - DEBUG - Finished Request
+20170712 11:54:43.407 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8669264611862044-17/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8669264611862044-17"}
+20170712 11:54:43.496 - DEBUG - Finished Request
+20170712 11:54:43.506 - INFO - +---- END KW: Selenium2Library.Click Element (117)
+20170712 11:54:43.507 - INFO - +---- START KW: BuiltIn.Run Keyword And Return Status [ Element Should Be Visible | //*[@class="ant-message-notice"] ]
+20170712 11:54:43.508 - INFO - +----- START KW: Selenium2Library.Element Should Be Visible [ //*[@class="ant-message-notice"] ]
+20170712 11:54:43.508 - INFO - Verifying element '//*[@class="ant-message-notice"]' is visible.
+20170712 11:54:43.509 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@class=\"ant-message-notice\"]"}
+20170712 11:54:45.529 - DEBUG - Finished Request
+20170712 11:54:45.547 - INFO - +------ START KW: Selenium2Library.Capture Page Screenshot [ ]
+20170712 11:54:45.562 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/screenshot {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:45.805 - DEBUG - Finished Request
+20170712 11:54:45.823 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-4.png"><img src="selenium-screenshot-4.png" width="800px"></a>
+20170712 11:54:45.823 - INFO - +------ END KW: Selenium2Library.Capture Page Screenshot (276)
+20170712 11:54:45.824 - FAIL - The element '//*[@class="ant-message-notice"]' should be visible, but it is not.
+20170712 11:54:45.824 - DEBUG - Traceback (most recent call last):
   File "<decorator-gen-53>", line 2, in element_should_be_visible
   File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
     return method(*args, **kwargs)
   File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 234, in element_should_be_visible
     raise AssertionError(message)
-20170627 16:46:48.710 - INFO - +----- END KW: Selenium2Library.Element Should Be Visible (5298)
-20170627 16:46:48.710 - INFO - ${isPresent} = False
-20170627 16:46:48.710 - INFO - +---- END KW: BuiltIn.Run Keyword And Return Status (5299)
-20170627 16:46:48.710 - INFO - +---- START KW: BuiltIn.Run Keyword If [ ${isPresent} | Log to console | agency_${random.username} is already exists. ]
-20170627 16:46:48.711 - INFO - +---- END KW: BuiltIn.Run Keyword If (1)
-20170627 16:46:48.711 - INFO - +---- START KW: BuiltIn.Log To Console [ ${isPresent} ]
-20170627 16:46:48.712 - INFO - +---- END KW: BuiltIn.Log To Console (1)
-20170627 16:46:48.712 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ ${Selenium.Timeout} ]
-20170627 16:46:48.712 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 120000.0}
-20170627 16:46:48.714 - DEBUG - Finished Request
-20170627 16:46:48.716 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:46:48.716 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ ${Selenium.Timeout} ]
-20170627 16:46:48.716 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 120000.0}
-20170627 16:46:48.718 - DEBUG - Finished Request
-20170627 16:46:48.719 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:48.719 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:48.725 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:48.991 - DEBUG - Finished Request
-20170627 16:46:48.993 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-25.png"><img src="selenium-screenshot-25.png" width="800px"></a>
-20170627 16:46:48.993 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (274)
-20170627 16:46:48.994 - INFO - +--- END KW: Register new agency (15504)
+20170712 11:54:45.824 - INFO - +----- END KW: Selenium2Library.Element Should Be Visible (2316)
+20170712 11:54:45.824 - INFO - ${isPresent} = False
+20170712 11:54:45.824 - INFO - +---- END KW: BuiltIn.Run Keyword And Return Status (2317)
+20170712 11:54:45.825 - INFO - +---- START KW: BuiltIn.Run Keyword If [ ${isPresent} | Log to console | employee_${random.username} is already exists. ]
+20170712 11:54:45.825 - INFO - +---- END KW: BuiltIn.Run Keyword If (1)
+20170712 11:54:45.825 - INFO - +---- START KW: BuiltIn.Log To Console [ ${isPresent} ]
+20170712 11:54:45.826 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20170712 11:54:45.826 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ ${Selenium.Timeout} ]
+20170712 11:54:45.826 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/timeouts/implicit_wait {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "ms": 2000.0}
+20170712 11:54:45.828 - DEBUG - Finished Request
+20170712 11:54:45.838 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (12)
+20170712 11:54:45.838 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ ${Selenium.Timeout} ]
+20170712 11:54:45.838 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/timeouts/async_script {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "ms": 2000.0}
+20170712 11:54:45.840 - DEBUG - Finished Request
+20170712 11:54:45.851 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (13)
+20170712 11:54:45.851 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
+20170712 11:54:45.857 - DEBUG - GET http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/screenshot {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff"}
+20170712 11:54:46.120 - DEBUG - Finished Request
+20170712 11:54:46.136 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-5.png"><img src="selenium-screenshot-5.png" width="800px"></a>
+20170712 11:54:46.136 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (285)
+20170712 11:54:46.136 - INFO - +--- END KW: Register new employer (14687)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:48.995 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:48.995 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (0)
+20170712 11:54:46.136 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
+20170712 11:54:46.136 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (0)
 ------------------------------------------------------------------------------
-20170627 16:46:48.997 - INFO - +-- END TEST: Create Account as Agency (15505)
+20170712 11:54:46.136 - INFO - +-- END TEST: Create Account as Employer (14687)
 ------------------------------------------------------------------------------
-20170627 16:46:48.998 - INFO - +-- START TEST: Create profile details [ ]
+20170712 11:54:46.136 - INFO - +-- START TEST: Create profile details [ ]
 ------------------------------------------------------------------------------
-20170627 16:46:48.998 - INFO - +--- START KW: Add details in Profile [ ]
-20170627 16:46:48.999 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 5 ]
-20170627 16:46:48.999 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 5000.0}
-20170627 16:46:49.000 - DEBUG - Finished Request
-20170627 16:46:49.003 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:46:49.003 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 5 ]
-20170627 16:46:49.003 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 5000.0}
-20170627 16:46:49.004 - DEBUG - Finished Request
-20170627 16:46:49.006 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:49.006 - INFO - +---- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Edit.Button} ]
-20170627 16:46:49.006 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()='Edit']"}
-20170627 16:46:54.056 - DEBUG - Finished Request
-20170627 16:46:54.058 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:54.074 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:54.340 - DEBUG - Finished Request
-20170627 16:46:54.343 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-26.png"><img src="selenium-screenshot-26.png" width="800px"></a>
-20170627 16:46:54.343 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (285)
-20170627 16:46:54.344 - FAIL - Element '//*[@type="button"]/span[text()='Edit']' did not appear in 5 seconds
-20170627 16:46:54.344 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-154>", line 2, in wait_until_page_contains_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 84, in wait_until_page_contains_element
-    self._wait_until(timeout, error, self._is_element_present, locator)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 231, in _wait_until
-    self._wait_until_no_error(timeout, wait_func)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_waiting.py", line 240, in _wait_until_no_error
-    raise AssertionError(timeout_error)
-20170627 16:46:54.344 - INFO - +---- END KW: Selenium2Library.Wait Until Page Contains Element (5338)
-20170627 16:46:54.345 - INFO - +--- END KW: Add details in Profile (5346)
+20170712 11:54:46.136 - INFO - +--- START KW: Add details in Profile [ ]
+20170712 11:54:46.136 - INFO - +---- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Edit.Button} ]
+20170712 11:54:46.136 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"button\"]/span[text()='Edit']"}
+20170712 11:54:46.152 - DEBUG - Finished Request
+20170712 11:54:46.167 - INFO - +---- END KW: Selenium2Library.Wait Until Page Contains Element (31)
+20170712 11:54:46.167 - INFO - +---- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Continue.Button} ]
+20170712 11:54:46.167 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
+20170712 11:54:46.183 - DEBUG - Finished Request
+20170712 11:54:46.199 - INFO - +---- END KW: Selenium2Library.Wait Until Page Contains Element (32)
+20170712 11:54:46.199 - INFO - +---- START KW: lib.Profile.Update profile information [ ]
+20170712 11:54:46.199 - INFO - +----- START KW: Selenium2Library.Click Element [ ${Profile.Edit.Button} ]
+20170712 11:54:46.199 - INFO - Clicking element '//*[@type="button"]/span[text()='Edit']'.
+20170712 11:54:46.199 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"button\"]/span[text()='Edit']"}
+20170712 11:54:46.199 - DEBUG - Finished Request
+20170712 11:54:46.214 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-1/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-1"}
+20170712 11:54:46.283 - DEBUG - Finished Request
+20170712 11:54:46.293 - INFO - +----- END KW: Selenium2Library.Click Element (94)
+20170712 11:54:46.294 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Profile.Details.PhoneNo.Text} | 123456 ]
+20170712 11:54:46.294 - INFO - Typing text '123456' into text field 'id=phoneNo'
+20170712 11:54:46.295 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "phoneNo"}
+20170712 11:54:46.312 - DEBUG - Finished Request
+20170712 11:54:46.323 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-3/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-3"}
+20170712 11:54:46.347 - DEBUG - Finished Request
+20170712 11:54:46.358 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-3/value {"text": "123456", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-3", "value": ["1", "2", "3", "4", "5", "6"]}
+20170712 11:54:46.511 - DEBUG - Finished Request
+20170712 11:54:46.522 - INFO - +----- END KW: Selenium2Library.Input Text (228)
+20170712 11:54:46.522 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Profile.Details.Skype.Text} | skype.id ]
+20170712 11:54:46.523 - INFO - Typing text 'skype.id' into text field 'id=skype'
+20170712 11:54:46.523 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "skype"}
+20170712 11:54:46.542 - DEBUG - Finished Request
+20170712 11:54:46.552 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-4/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-4"}
+20170712 11:54:46.575 - DEBUG - Finished Request
+20170712 11:54:46.587 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-4/value {"text": "skype.id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-4", "value": ["s", "k", "y", "p", "e", ".", "i", "d"]}
+20170712 11:54:46.732 - DEBUG - Finished Request
+20170712 11:54:46.743 - INFO - +----- END KW: Selenium2Library.Input Text (221)
+20170712 11:54:46.743 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Profile.Details.LinkedIn.Text} | linkedin.com\\mylinkedin ]
+20170712 11:54:46.743 - INFO - Typing text 'linkedin.com\mylinkedin' into text field 'id=linkedIn'
+20170712 11:54:46.744 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "linkedIn"}
+20170712 11:54:46.760 - DEBUG - Finished Request
+20170712 11:54:46.771 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-5/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-5"}
+20170712 11:54:46.797 - DEBUG - Finished Request
+20170712 11:54:46.808 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-5/value {"text": "linkedin.com\\mylinkedin", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-5", "value": ["l", "i", "n", "k", "e", "d", "i", "n", ".", "c", "o", "m", "\\", "m", "y", "l", "i", "n", "k", "e", "d", "i", "n"]}
+20170712 11:54:47.145 - DEBUG - Finished Request
+20170712 11:54:47.155 - INFO - +----- END KW: Selenium2Library.Input Text (412)
+20170712 11:54:47.155 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Profile.Details.Twitter.Text} | twitter.com\\mytwitter ]
+20170712 11:54:47.155 - INFO - Typing text 'twitter.com\mytwitter' into text field 'id=twitter'
+20170712 11:54:47.156 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "twitter"}
+20170712 11:54:47.172 - DEBUG - Finished Request
+20170712 11:54:47.183 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-6/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-6"}
+20170712 11:54:47.225 - DEBUG - Finished Request
+20170712 11:54:47.236 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-6/value {"text": "twitter.com\\mytwitter", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-6", "value": ["t", "w", "i", "t", "t", "e", "r", ".", "c", "o", "m", "\\", "m", "y", "t", "w", "i", "t", "t", "e", "r"]}
+20170712 11:54:47.521 - DEBUG - Finished Request
+20170712 11:54:47.532 - INFO - +----- END KW: Selenium2Library.Input Text (377)
+20170712 11:54:47.533 - INFO - +----- START KW: Selenium2Library.Input Text [ ${Profile.Details.Website.Text} | http:\\\\www.mywebsite.com ]
+20170712 11:54:47.533 - INFO - Typing text 'http:\\www.mywebsite.com' into text field 'id=website'
+20170712 11:54:47.534 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "id", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "website"}
+20170712 11:54:47.556 - DEBUG - Finished Request
+20170712 11:54:47.567 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-7/clear {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-7"}
+20170712 11:54:47.599 - DEBUG - Finished Request
+20170712 11:54:47.609 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-7/value {"text": "http:\\\\www.mywebsite.com", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-7", "value": ["h", "t", "t", "p", ":", "\\", "\\", "w", "w", "w", ".", "m", "y", "w", "e", "b", "s", "i", "t", "e", ".", "c", "o", "m"]}
+20170712 11:54:47.905 - DEBUG - Finished Request
+20170712 11:54:47.916 - INFO - +----- END KW: Selenium2Library.Input Text (384)
+20170712 11:54:47.916 - INFO - +----- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Cancel.Button} ]
+20170712 11:54:47.916 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Cancel')]]"}
+20170712 11:54:47.933 - DEBUG - Finished Request
+20170712 11:54:47.943 - INFO - +----- END KW: Selenium2Library.Wait Until Page Contains Element (27)
+20170712 11:54:47.943 - INFO - +----- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Save.Button} ]
+20170712 11:54:47.943 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"submit\"]/span[text()[contains(.,'Save Changes')]]"}
+20170712 11:54:47.951 - DEBUG - Finished Request
+20170712 11:54:47.967 - INFO - +----- END KW: Selenium2Library.Wait Until Page Contains Element (24)
+20170712 11:54:47.967 - INFO - +----- START KW: Selenium2Library.Click Element [ ${Profile.Save.Button} ]
+20170712 11:54:47.967 - INFO - Clicking element '//*[@type="submit"]/span[text()[contains(.,'Save Changes')]]'.
+20170712 11:54:47.967 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"submit\"]/span[text()[contains(.,'Save Changes')]]"}
+20170712 11:54:47.967 - DEBUG - Finished Request
+20170712 11:54:47.983 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/element/0.8541582351728505-2/click {"sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "id": "0.8541582351728505-2"}
+20170712 11:54:48.049 - DEBUG - Finished Request
+20170712 11:54:48.059 - INFO - +----- END KW: Selenium2Library.Click Element (92)
+20170712 11:54:48.060 - INFO - +----- START KW: Selenium2Library.Wait Until Page Contains Element [ ${Profile.Edit.Button} ]
+20170712 11:54:48.060 - DEBUG - POST http://127.0.0.1:62176/session/f254a66f2916f40cc1ebd7820c1cb4ff/elements {"using": "xpath", "sessionId": "f254a66f2916f40cc1ebd7820c1cb4ff", "value": "//*[@type=\"button\"]/span[text()='Edit']"}
+20170712 11:54:48.068 - DEBUG - Finished Request
+20170712 11:54:48.078 - INFO - +----- END KW: Selenium2Library.Wait Until Page Contains Element (18)
+20170712 11:54:48.078 - INFO - +---- END KW: lib.Profile.Update profile information (1879)
+20170712 11:54:48.079 - INFO - +--- END KW: Add details in Profile (1943)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:54.345 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:54.345 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:54.352 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:54.607 - DEBUG - Finished Request
-20170627 16:46:54.611 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-27.png"><img src="selenium-screenshot-27.png" width="800px"></a>
-20170627 16:46:54.611 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (266)
-20170627 16:46:54.612 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (266)
+20170712 11:54:48.080 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
+20170712 11:54:48.081 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (0)
 ------------------------------------------------------------------------------
-20170627 16:46:54.614 - INFO - +-- END TEST: Create profile details (5614)
+20170712 11:54:48.083 - INFO - +-- END TEST: Create profile details (1945)
 ------------------------------------------------------------------------------
-20170627 16:46:54.615 - INFO - +-- START TEST: Create profile office address [ ]
-------------------------------------------------------------------------------
-20170627 16:46:54.615 - INFO - +--- START KW: Create address [ ]
-20170627 16:46:54.615 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:54.616 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:54.617 - DEBUG - Finished Request
-20170627 16:46:54.618 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:46:54.618 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:54.618 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:54.620 - DEBUG - Finished Request
-20170627 16:46:54.621 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:54.621 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Addresses.Left.Menu.Link} ]
-20170627 16:46:54.622 - INFO - Clicking element '//li[@class="ant-menu-item"]/a[text()[contains(.,"Addresses")]]'.
-20170627 16:46:54.622 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//li[@class=\"ant-menu-item\"]/a[text()[contains(.,\"Addresses\")]]"}
-20170627 16:46:56.648 - DEBUG - Finished Request
-20170627 16:46:56.649 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:56.654 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:56.924 - DEBUG - Finished Request
-20170627 16:46:56.927 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-28.png"><img src="selenium-screenshot-28.png" width="800px"></a>
-20170627 16:46:56.927 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (278)
-20170627 16:46:56.927 - FAIL - ValueError: Element locator '//li[@class="ant-menu-item"]/a[text()[contains(.,"Addresses")]]' did not match any elements.
-20170627 16:46:56.927 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:56.927 - INFO - +---- END KW: Selenium2Library.Click Element (2306)
-20170627 16:46:56.928 - INFO - +--- END KW: Create address (2313)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:56.928 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:56.929 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:56.934 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:57.209 - DEBUG - Finished Request
-20170627 16:46:57.212 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-29.png"><img src="selenium-screenshot-29.png" width="800px"></a>
-20170627 16:46:57.212 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (283)
-20170627 16:46:57.212 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (284)
-------------------------------------------------------------------------------
-20170627 16:46:57.216 - INFO - +-- END TEST: Create profile office address (2598)
-------------------------------------------------------------------------------
-20170627 16:46:57.216 - INFO - +-- START TEST: Create profile region [ ]
-------------------------------------------------------------------------------
-20170627 16:46:57.216 - INFO - +--- START KW: Create regions [ ]
-20170627 16:46:57.217 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:57.217 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:57.218 - DEBUG - Finished Request
-20170627 16:46:57.221 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:46:57.221 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:57.221 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:57.223 - DEBUG - Finished Request
-20170627 16:46:57.225 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (4)
-20170627 16:46:57.225 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:57.226 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:57.226 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:46:59.241 - DEBUG - Finished Request
-20170627 16:46:59.243 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:59.261 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:59.523 - DEBUG - Finished Request
-20170627 16:46:59.526 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-30.png"><img src="selenium-screenshot-30.png" width="800px"></a>
-20170627 16:46:59.527 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (284)
-20170627 16:46:59.527 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:46:59.527 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:46:59.527 - INFO - +---- END KW: Selenium2Library.Click Element (2302)
-20170627 16:46:59.528 - INFO - +--- END KW: Create regions (2311)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:46:59.528 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:46:59.529 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:46:59.535 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:46:59.807 - DEBUG - Finished Request
-20170627 16:46:59.810 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-31.png"><img src="selenium-screenshot-31.png" width="800px"></a>
-20170627 16:46:59.810 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (281)
-20170627 16:46:59.811 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (282)
-------------------------------------------------------------------------------
-20170627 16:46:59.813 - INFO - +-- END TEST: Create profile region (2595)
-------------------------------------------------------------------------------
-20170627 16:46:59.814 - INFO - +-- START TEST: Create profile industry [ ]
-------------------------------------------------------------------------------
-20170627 16:46:59.814 - INFO - +--- START KW: Create industries [ ]
-20170627 16:46:59.815 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:46:59.815 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:59.816 - DEBUG - Finished Request
-20170627 16:46:59.817 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (2)
-20170627 16:46:59.817 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:46:59.818 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:46:59.819 - DEBUG - Finished Request
-20170627 16:46:59.820 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:46:59.820 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:46:59.820 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:46:59.820 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:47:01.862 - DEBUG - Finished Request
-20170627 16:47:01.863 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:01.880 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:02.141 - DEBUG - Finished Request
-20170627 16:47:02.143 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-32.png"><img src="selenium-screenshot-32.png" width="800px"></a>
-20170627 16:47:02.144 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (281)
-20170627 16:47:02.144 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:47:02.144 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:47:02.144 - INFO - +---- END KW: Selenium2Library.Click Element (2324)
-20170627 16:47:02.146 - INFO - +--- END KW: Create industries (2331)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:47:02.146 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:47:02.146 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:02.152 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:02.448 - DEBUG - Finished Request
-20170627 16:47:02.450 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-33.png"><img src="selenium-screenshot-33.png" width="800px"></a>
-20170627 16:47:02.451 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (305)
-20170627 16:47:02.451 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (305)
-------------------------------------------------------------------------------
-20170627 16:47:02.454 - INFO - +-- END TEST: Create profile industry (2638)
-------------------------------------------------------------------------------
-20170627 16:47:02.454 - INFO - +-- START TEST: Create profile supplier history [ ]
-------------------------------------------------------------------------------
-20170627 16:47:02.455 - INFO - +--- START KW: Create supplier history [ ]
-20170627 16:47:02.455 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:47:02.456 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:02.457 - DEBUG - Finished Request
-20170627 16:47:02.459 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (4)
-20170627 16:47:02.459 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:47:02.459 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:02.461 - DEBUG - Finished Request
-20170627 16:47:02.462 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:47:02.462 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:47:02.462 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:47:02.462 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:47:04.508 - DEBUG - Finished Request
-20170627 16:47:04.510 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:04.528 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:04.790 - DEBUG - Finished Request
-20170627 16:47:04.794 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-34.png"><img src="selenium-screenshot-34.png" width="800px"></a>
-20170627 16:47:04.794 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (284)
-20170627 16:47:04.795 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:47:04.795 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:47:04.795 - INFO - +---- END KW: Selenium2Library.Click Element (2333)
-20170627 16:47:04.796 - INFO - +--- END KW: Create supplier history (2340)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:47:04.796 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:47:04.796 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:04.802 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:05.071 - DEBUG - Finished Request
-20170627 16:47:05.073 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-35.png"><img src="selenium-screenshot-35.png" width="800px"></a>
-20170627 16:47:05.073 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (277)
-20170627 16:47:05.074 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (277)
-------------------------------------------------------------------------------
-20170627 16:47:05.076 - INFO - +-- END TEST: Create profile supplier history (2620)
-------------------------------------------------------------------------------
-20170627 16:47:05.077 - INFO - +-- START TEST: Create profile testimonials [ ]
-------------------------------------------------------------------------------
-20170627 16:47:05.077 - INFO - +--- START KW: Create testimonials [ ]
-20170627 16:47:05.078 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:47:05.078 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:05.080 - DEBUG - Finished Request
-20170627 16:47:05.081 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:47:05.081 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:47:05.082 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:05.085 - DEBUG - Finished Request
-20170627 16:47:05.086 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (5)
-20170627 16:47:05.086 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:47:05.087 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:47:05.087 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:47:07.144 - DEBUG - Finished Request
-20170627 16:47:07.145 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:07.152 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:07.421 - DEBUG - Finished Request
-20170627 16:47:07.424 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-36.png"><img src="selenium-screenshot-36.png" width="800px"></a>
-20170627 16:47:07.424 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (279)
-20170627 16:47:07.425 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:47:07.425 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:47:07.425 - INFO - +---- END KW: Selenium2Library.Click Element (2339)
-20170627 16:47:07.425 - INFO - +--- END KW: Create testimonials (2348)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:47:07.426 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:47:07.426 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:07.432 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:07.690 - DEBUG - Finished Request
-20170627 16:47:07.693 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-37.png"><img src="selenium-screenshot-37.png" width="800px"></a>
-20170627 16:47:07.694 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (268)
-20170627 16:47:07.695 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (268)
-------------------------------------------------------------------------------
-20170627 16:47:07.697 - INFO - +-- END TEST: Create profile testimonials (2618)
-------------------------------------------------------------------------------
-20170627 16:47:07.697 - INFO - +-- START TEST: Validate profile preview [ ]
-------------------------------------------------------------------------------
-20170627 16:47:07.698 - INFO - +--- START KW: Profile preview [ ]
-20170627 16:47:07.698 - INFO - +---- START KW: Selenium2Library.Set Selenium Implicit Wait [ 2 ]
-20170627 16:47:07.698 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/implicit_wait {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:07.700 - DEBUG - Finished Request
-20170627 16:47:07.701 - INFO - +---- END KW: Selenium2Library.Set Selenium Implicit Wait (3)
-20170627 16:47:07.701 - INFO - +---- START KW: Selenium2Library.Set Selenium Timeout [ 2 ]
-20170627 16:47:07.701 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/timeouts/async_script {"sessionId": "dc45a823c9a7696206cd8c9ac47159af", "ms": 2000.0}
-20170627 16:47:07.703 - DEBUG - Finished Request
-20170627 16:47:07.704 - INFO - +---- END KW: Selenium2Library.Set Selenium Timeout (3)
-20170627 16:47:07.704 - INFO - +---- START KW: Selenium2Library.Click Element [ ${Profile.Continue.Button} ]
-20170627 16:47:07.704 - INFO - Clicking element '//*[@type="button"]/span[text()[contains(.,'Continue')]]'.
-20170627 16:47:07.705 - DEBUG - POST http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/elements {"using": "xpath", "sessionId": "dc45a823c9a7696206cd8c9ac47159af", "value": "//*[@type=\"button\"]/span[text()[contains(.,'Continue')]]"}
-20170627 16:47:09.756 - DEBUG - Finished Request
-20170627 16:47:09.758 - INFO - +----- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:09.774 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:10.041 - DEBUG - Finished Request
-20170627 16:47:10.043 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-38.png"><img src="selenium-screenshot-38.png" width="800px"></a>
-20170627 16:47:10.044 - INFO - +----- END KW: Selenium2Library.Capture Page Screenshot (286)
-20170627 16:47:10.044 - FAIL - ValueError: Element locator '//*[@type="button"]/span[text()[contains(.,'Continue')]]' did not match any elements.
-20170627 16:47:10.044 - DEBUG - Traceback (most recent call last):
-  File "<decorator-gen-46>", line 2, in click_element
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 354, in click_element
-    self._element_find(locator, True, True).click()
-  File "C:\Python27\lib\site-packages\robotframework_selenium2library-1.8.0-py2.7.egg\Selenium2Library\keywords\_element.py", line 690, in _element_find
-    raise ValueError("Element locator '" + locator + "' did not match any elements.")
-20170627 16:47:10.044 - INFO - +---- END KW: Selenium2Library.Click Element (2340)
-20170627 16:47:10.045 - INFO - +--- END KW: Profile preview (2346)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20170627 16:47:10.045 - INFO - +--- START TEARDOWN: BuiltIn.Run Keyword If Test Failed [ Capture Page Screenshot ]
-20170627 16:47:10.046 - INFO - +---- START KW: Selenium2Library.Capture Page Screenshot [ ]
-20170627 16:47:10.057 - DEBUG - GET http://127.0.0.1:64606/session/dc45a823c9a7696206cd8c9ac47159af/screenshot {"sessionId": "dc45a823c9a7696206cd8c9ac47159af"}
-20170627 16:47:10.328 - DEBUG - Finished Request
-20170627 16:47:10.332 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-39.png"><img src="selenium-screenshot-39.png" width="800px"></a>
-20170627 16:47:10.332 - INFO - +---- END KW: Selenium2Library.Capture Page Screenshot (286)
-20170627 16:47:10.333 - INFO - +--- END TEARDOWN: BuiltIn.Run Keyword If Test Failed (287)
-------------------------------------------------------------------------------
-20170627 16:47:10.335 - INFO - +-- END TEST: Validate profile preview (2636)
-------------------------------------------------------------------------------
-20170627 16:47:10.342 - INFO - +- END SUITE: Regression.4.CreateAccountAsAgency (36856)
+20170712 11:54:48.088 - INFO - +- END SUITE: Regression.1.CreateAccountAsEmployer (16785)
 ==============================================================================
-20170627 16:47:10.350 - INFO - + END SUITE: Regression (187500)
+20170712 11:54:48.092 - INFO - + END SUITE: Regression (16806)
 ==============================================================================
