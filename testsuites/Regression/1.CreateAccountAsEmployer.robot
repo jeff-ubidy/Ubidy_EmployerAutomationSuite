@@ -29,27 +29,27 @@ Create profile details
     #Validate entered profile details
 
 Create profile office address
-    [Tags]      inprogress
+    [Tags]      skip
     Create address
 
 Create profile region
-    [Tags]      inprogress
+    [Tags]      skip
     Create regions
 
 Create profile industry
-    [Tags]      inprogress
+    [Tags]      skip
     Create industries
 
 Create profile supplier history
-    [Tags]      inprogress
+    [Tags]      skip
     Create supplier history
 
 Create profile testimonials
-    [Tags]      inprogress
+    [Tags]      skip
     Create testimonials
 
 Validate profile preview
-    [Tags]      inprogress
+    [Tags]      skip
     Profile preview
 
 #Create Account as Agency
@@ -84,9 +84,9 @@ Register new employer
     Element Should Be Enabled           ${Registration.Yes.Button}
     Capture Page Screenshot
     Click Element                       ${Registration.Yes.Button}
-    ${isPresent} =                      Run Keyword And Return Status               Element Should Be Visible                                           //*[@class="ant-message-notice"]
-    Run Keyword If                      ${isPresent}                                Log to console                                                      employee_${random.username} is already exists.
-    Log to console                      ${isPresent}
+#   ${isPresent} =                      Run Keyword And Return Status               Element Should Be Visible                                           //*[@class="ant-message-notice"]
+#   Run Keyword If                      ${isPresent}                                Log to console                                                      employee_${random.username} is already exists.
+#   Log to console                      ${isPresent}
     Set Selenium Implicit Wait          ${Selenium.Timeout}
     Set Selenium Timeout                ${Selenium.Timeout}
     Capture Page Screenshot
@@ -94,6 +94,7 @@ Register new employer
 
 
 Add details in Profile
+    Sleep   2s
     Wait Until Page Contains Element                                                ${Profile.Edit.Button}
     Wait Until Page Contains Element                                                ${Profile.Continue.Button}
     lib.Profile.Update profile information
@@ -120,7 +121,7 @@ Create address
     Click Element                       ${Addresses.Left.Menu.Link}
     Wait Until Page Contains Element    ${Profile.Edit.Button}
     Wait Until Page Contains Element    ${Profile.AddOffice.Button}
-    Wait Until Page Contains Element    ${Profile.Delete.Button}
+#    Wait Until Page Contains Element    ${Profile.Delete.Button}
     Wait Until Page Contains Element    ${Profile.Continue.Button}
     #HeadOffice--------
     Log to console                      ${\n}
@@ -134,16 +135,16 @@ Create address
     Wait Until Element Is Not Visible   ${Address.Save.Button}
     Wait Until Page Contains Element    ${Profile.AddOffice.Button}
     Capture Page Screenshot
-    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Label}                Address: 250 St. Georges Tce. QV1 Building Perth, Great Southern Australia 6000
-    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Phone.Label}          Phone: +61.8.9216.4000
-    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Email.Label}          Email: testemployer@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Label}                Address: 250 St. Georges Tce. QV1 Building Perth, Great Southern Albania 6000
+    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Phone.Label}          Phone: 61.8.9216.4000
+    lib.Ubidy.Text Should Be Equal      ${Address.Head.Office.Email.Label}          Email: employer@mailinator.com
     #RegionalOffice------
     Log to console                      ${\n}
     Log to console                      ----------[RegionalOffice]--------
     Click Element                       ${Profile.AddOffice.Button}
     Wait Until Page Contains Element    ${Address.Edit.Button}
     Wait Until Page Contains Element    ${Address.Save.Button}
-    #Click Element                       ${Address.Type}
+    #Click Element                      ${Address.Type}
     #Click Element                       ${Address.Type.Correspondence}
     lib.Profile.Update regional address
     Click Element                       ${Address.Save.Button}
@@ -151,9 +152,9 @@ Create address
     Wait Until Element Is Not Visible   ${Address.Save.Button}
     Wait Until Page Contains Element    ${Profile.AddOffice.Button}
     Capture Page Screenshot
-    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Label}            Address: 150 St. Georges Tce. CITI Building Perth, Great Southern Australia 6000
-    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Phone.Label}      Phone: +61.8.9216.5000
-    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Email.Label}      Email: testemployer1@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Label}            Address: 150 St. Georges Tce. CITI Building Perth, Great Southern Albania 6000
+    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Phone.Label}      Phone: 61.8.9216.5000
+    lib.Ubidy.Text Should Be Equal      ${Address.Regional.Office.Email.Label}      Email: employer1@mailinator.com
     #Correspondence----------
     Log to console                      ${\n}
     Log to console                      ----------[CorrespondenceOffice]--------
@@ -172,9 +173,9 @@ Create address
     Wait Until Element Is Not Visible   ${Address.Save.Button}
     Wait Until Page Contains Element    ${Profile.AddOffice.Button}
     Capture Page Screenshot
-    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Label}          Address: 050 St. Georges Tce. Mt. View Building Perth, Great Southern Australia 6000
-    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Phone.Label}    Phone: +61.8.9216.7000
-    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Email.Label}    Email: testemployer2@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Label}          Address: 050 St. Georges Tce. Mt. View Building Perth, Great Southern Albania 6000
+    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Phone.Label}    Phone: 61.8.9216.7000
+    lib.Ubidy.Text Should Be Equal      ${Address.Correspondence.Office.Email.Label}    Email: employer2@mailinator.com
     Set Selenium Implicit Wait          ${Selenium.Timeout}
     Set Selenium Timeout                ${Selenium.Timeout}
 
@@ -186,7 +187,7 @@ Create regions
     Click Element                       ${Profile.Continue.Button}
     #Click Element                       ${Regions.Left.Menu.Link}
     Wait Until Page Contains Element    ${Regions.Region.Select}
-    Reload Page
+    #Reload Page
     #sleep       120s
     Focus                               ${Regions.Region.Select}
     Click Element                       ${Regions.Region.Select}
@@ -199,18 +200,20 @@ Create regions
     Wait Until Page Contains Element    ${Regions.Country.Select1.Label}
     Capture Page Screenshot
     Click Element                       ${Regions.Country.Select1.Label}
+    Sleep   1s
     Wait Until Element Is Enabled       ${Regions.Add.Region.Button}
     Click Element                       ${Regions.Add.Region.Button}
-    Click Element                       ${Regions.Region.Select}
+    Click Element                       ${Regions.Region2.Select}
     Capture Page Screenshot
     Click Element                       ${Regions.Region.Select2.Label}
     Wait Until Page Contains Element    ${Regions.Country.Select}
     Click Element                       ${Regions.Country.Select}
     Capture Page Screenshot
     Click Element                       ${Regions.Country.Select2.Label}
+    Sleep   1s
     Wait Until Element Is Enabled       ${Regions.Add.Region.Button}
     Click Element                       ${Regions.Add.Region.Button}
-    Sleep   2s
+    Sleep   1s
     lib.Ubidy.Text Should Be Equal      ${Regions.Table.FirstRow_1.Label}               North America
     lib.Ubidy.Text Should Be Equal      ${Regions.Table.FirstRow_2.Label}               United States
     lib.Ubidy.Text Should Be Equal      ${Regions.Table.SecondRow_1.Label}              Europe
@@ -233,9 +236,10 @@ Create industries
     Click Element                       ${Industries.Industry.Select}
     Wait Until Page Contains Element    ${Industries.Industry.Select1.Label}
     Click Element                       ${Industries.Industry.Select1.Label}
+    Sleep   1s
     Wait Until Element Is Enabled       ${Industries.Add.Industry.Button}
     Click Element                       ${Industries.Add.Industry.Button}
-    Click Element                       ${Industries.Sector.Select}
+    Click Element                       ${Industries.Sector2.Select}
     Wait Until Page Contains Element    ${Industries.Sector.Select2.Label}
     Capture Page Screenshot
     Click Element                       ${Industries.Sector.Select2.Label}
@@ -243,6 +247,7 @@ Create industries
     Wait Until Page Contains Element    ${Industries.Industry.Select2.Label}
     Capture Page Screenshot
     Click Element                       ${Industries.Industry.Select2.Label}
+    Sleep   1s
     Wait Until Element Is Enabled       ${Industries.Add.Industry.Button}
     Click Element                       ${Industries.Add.Industry.Button}
     lib.Ubidy.Text Should Be Equal      ${Industries.Table.FirstRow_1.Label}               Construction
@@ -258,34 +263,9 @@ Create supplier history
     Set Selenium Timeout                2
     Click Element                       ${Profile.Continue.Button}
     #Click Element   //li[@class="ant-menu-item"]/a[text()[contains(.,"Supplier History")]]
-    Wait Until Page Contains Element    ${SuppHistory.Add.Supplier.History.Button}
-    Capture Page Screenshot
-    Click Element                       ${SuppHistory.Add.Supplier.History.Button}
-    Wait Until Page Contains Element    ${SuppHistory.Save.Button}
-    Wait Until Page Contains Element    ${SuppHistory.Cancel.Button}
-    Capture Page Screenshot
-    Input Text                          ${SuppHistory.Supplier.Name.Text}                   Shell
-    Input Text                          ${SuppHistory.Project.Text}                         Project Malampaya
-    Input Text                          ${SuppHistory.Location.Text}                        Mindanao
-    Input Text                          ${SuppHistory.Country.Text}                         Philippines
-    Click Element                       ${SuppHistory.Sector.Select}
-    Click Element                       ${SuppHistory.Sector.Select.Label}
-    Click Element                       ${SuppHistory.Industry.Select}
-    Click Element                       ${SuppHistory.Industry.Select.Label}
-    Click Element                       ${SuppHistory.Type.Select}
-    Click Element                       ${SuppHistory.Type.Select.Label}
-    Click Element                       ${SuppHistory.Class.Select}
-    Click Element                       ${SuppHistory.Class.Select.Label}
-    Capture Page Screenshot
-    Click Element                       ${SuppHistory.Save.Button}
-    Wait Until Page Contains Element    ${SuppHistory.Tag.Type.Label}
-    Wait Until Page Contains Element    ${SuppHistory.Tag.Class.Label}
-    lib.Ubidy.Text Should Be Equal      ${SuppHistory.Tag.Type.Label}                       Perm Placement
-    lib.Ubidy.Text Should Be Equal      ${SuppHistory.Tag.Class.Label}                      Skilled
-    lib.Ubidy.Text Should Be Equal      ${SuppHistory.Project.Line1}                        Shell - Project Malampaya
-    lib.Ubidy.Text Should Be Equal      ${SuppHistory.Project.Line2}                        Mindanao , Philippines, Asia & Pacific
-    lib.Ubidy.Text Should Be Equal      ${SuppHistory.Project.Line3}                        Construction | Buildings
-    Capture Page Screenshot
+    Add Supplier                        Shell       Project Malampaya        Mindanao       Perm Placement     Skilled/Semi-Skilled        Shell - Project Malampaya        Mindanao , Algeria, Middle East     Construction | Buildings    1
+    Add Supplier                        Chevron     Project Xcon             Luzon          Perm Placement     Skilled/Semi-Skilled        Chevron - Project Xcon           Luzon , Algeria, Middle East     Construction | Buildings      2
+    Add Supplier                        Total       Project Mines            Visayas        Perm Placement     Skilled/Semi-Skilled        Total - Project Mines            Visayas , Algeria, Middle East     Construction | Buildings    3
     Set Selenium Implicit Wait          ${Selenium.Timeout}
     Set Selenium Timeout                ${Selenium.Timeout}
 
@@ -298,15 +278,15 @@ Create testimonials
     Wait Until Page Contains Element    ${Testimonials.Send.Invitation.Button}
     Input Text                          ${Testimonials.Fullname.Text}                       John Smith
     Input Text                          ${Testimonials.Company.Text}                        Metal Corporation
-    Input Text                          ${Testimonials.Email.Text}                          testemployer@mailinator.com
+    Input Text                          ${Testimonials.Email.Text}                          employer@mailinator.com
     Capture Page Screenshot
     Click Element                       ${Testimonials.Send.Invitation.Button}
     lib.Ubidy.Scroll to element         //h3[@class="sub_title"]
     lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Name}                          John Smith
     lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Company}                       Metal Corporation
-    lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Email}                         testemployer@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Email}                         employer@mailinator.com
     lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Action}                        Cancel
-    ${date} =	                        Get Current Date                                    result_format=%Y/%m/%d
+    ${date} =	                        Get Current Date                                    result_format=%m/%d/%Y
     lib.Ubidy.Text Should Be Equal      ${Testimonials.Table.Sent}                          ${date}
     Capture Page Screenshot
     Set Selenium Implicit Wait          ${Selenium.Timeout}
@@ -314,29 +294,33 @@ Create testimonials
 
 
 Profile preview
-    Set Selenium Implicit Wait          2
-    Set Selenium Timeout                2
+    #Set Selenium Implicit Wait          2
+    #Set Selenium Timeout                2
     Click Element                       ${Profile.Continue.Button}
     #Click Element       //li[@class="ant-menu-item"]/a[text()[contains(.,"Profile Preview")]]
-    Wait Until Page Contains Element    ${Profile.Preview.AboutUs.Region.Label}
+    Wait Until Page Contains Element    ${Profile.Preview.Logo}
+    Wait Until Page Contains Element    ${Profile.Preview.Company.Name.Label}
+    lib.Ubidy.Scroll to element         ${Profile.Preview.Logo}
     Capture Page Screenshot
+    #Wait Until Page Contains Element    ${Profile.Preview.AboutUs.Region.Label}
+    #Capture Page Screenshot
     ${att}=    Get Element Attribute    ${Profile.Preview.Logo}@src
     Log to console                      ${att}
     Should Not Be Empty                 ${att}
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Company.Name.Label}               company name
+    #lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Company.Name.Label}              employee_${random.username}
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Address1.Label}                   250 St. Georges Tce.
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Address2.Label}                   QV1 Building
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Email.Label}                      testemployer@mailinator.com
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Phone.Label}                      + 61.8.9216.4000
-    #lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Fax.Label}                        +61 333 669 9966
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Label}                     Regional Office
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Address.Label}             150 St. Georges Tce. CITI Building Australia 6000
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Email.Label}               testemployer1@mailinator.com
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Phone.Label}               + 61.8.9216.5000
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Label}             Correspondence Office
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Address.Label}     050 St. Georges Tce. Mt. View Building Australia 6000
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Email.Label}       testemployer2@mailinator.com
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Phone.Label}       + 61.8.9216.7000
+    #lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Email.Label}                     employee_${random.username}@ubidy.com
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Phone.Label}                      +1234567890
+    #lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Fax.Label}                       +61 333 669 9966
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Label}                     Regional
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Address.Label}             150 St. Georges Tce. CITI Building Albania Perth 6000
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Email.Label}               employer1@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Region.Phone.Label}               +61.8.9216.5000
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Label}             Correspondence
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Address.Label}     050 St. Georges Tce. Mt. View Building Albania Perth 6000
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Email.Label}       employer2@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.AboutUs.Correspondence.Phone.Label}       +61.8.9216.7000
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Region.Row1}                              Regions
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Region.Row2}                              North America - United States
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Region.Row3}                              Europe - Albania
@@ -344,8 +328,8 @@ Profile preview
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Industry.Row2}                            Buildings - Construction
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Industry.Row3}                            Automotive - Manufacturing
     lib.Ubidy.Text Should Be Equal      ${Profile.Preview.ProjSupp.Label}                           Project Malampaya - Shell
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.ProjSupp.Add.Label}                       Philippines, Mindanao
-    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Testimonial.Label}                        testemployer@mailinator.com
+    lib.Ubidy.Text Should Be Equal      ${Profile.Preview.ProjSupp.Add.Label}                       Algeria, Mindanao
+    #lib.Ubidy.Text Should Be Equal      ${Profile.Preview.Testimonial.Label}                        employer@mailinator.com
     Capture Page Screenshot
     lib.Ubidy.Scroll to element         ${Profile.Preview.Region.Row1}
     Set Selenium Implicit Wait          ${Selenium.Timeout}
