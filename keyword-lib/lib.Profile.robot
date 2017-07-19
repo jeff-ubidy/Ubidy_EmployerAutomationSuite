@@ -67,8 +67,8 @@ Update profile information
     #Capture Page Screenshot
     Click Element                           ${Profile.Edit.Button}
     #Input Text                              ${Profile.Details.CompanyName.Text}         company name${random}
-    #Input Text                              ${Profile.Details.Email.Text}               testemployer@mailinator.com
-    Input Text                              ${Profile.Details.PhoneNo.Text}             123456
+    #Input Text                              ${Profile.Details.Email.Text}               employer@mailinator.com
+    Input Text                              ${Profile.Details.PhoneNo.Text}             1234567890
     #Input Text                              ${Profile.Details.Fax.Text}                 123456
     Input Text                              ${Profile.Details.Skype.Text}               skype.id
     Input Text                              ${Profile.Details.LinkedIn.Text}            linkedin.com\\mylinkedin
@@ -90,8 +90,8 @@ Validate entered profile details
     #Should Be Equal                        '${CompanyName}'                             'company name'
     #Textfield Value Should Be               ${Profile.Details.CompanyName.Text}         company name${random}
     #Validate element value                  ${Profile.Details.CompanyName.Text}         company name${random}
-    #Validate element value                  ${Profile.Details.Email.Text}               testemployer@mailinator.com
-    Validate element value                  ${Profile.Details.PhoneNo.Text}             123456
+    #Validate element value                  ${Profile.Details.Email.Text}               employer@mailinator.com
+    Validate element value                  ${Profile.Details.PhoneNo.Text}             1234567890
     #Validate element value                  ${Profile.Details.Fax.Text}                 123456
     Validate element value                  ${Profile.Details.Skype.Text}               skype.id
     Validate element value                  ${Profile.Details.LinkedIn.Text}            linkedin.com\\mylinkedin
@@ -115,9 +115,11 @@ Update head office address
     Input Text                              ${Address.City}                             Perth
     Input Text                              ${Address.State}                            Great Southern
     #Input Text                              ${Address.Country}                          Australia
+    Click Element                           ${Address.Country.Select}
+    Click Element                           ${Address.Country.Select.Label}
     Input Text                              ${Address.Zip}                              6000
-    Input Text                              ${Address.Phone}                            +61.8.9216.4000
-    Input Text                              ${Address.Email}                            testemployer@mailinator.com
+    Input Text                              ${Address.Phone}                            61.8.9216.4000
+    Input Text                              ${Address.Email}                            employer@mailinator.com
     #Capture Page Screenshot
 
 
@@ -128,9 +130,11 @@ Update regional address
     Input Text                              ${Address.City}                             Perth
     Input Text                              ${Address.State}                            Great Southern
     #Input Text                              ${Address.Country}                          Australia
+    Click Element                           ${Address.Country.Select}
+    Click Element                           ${Address.Country.Select.Label}
     Input Text                              ${Address.Zip}                              6000
-    Input Text                              ${Address.Phone}                            +61.8.9216.5000
-    Input Text                              ${Address.Email}                            testemployer1@mailinator.com
+    Input Text                              ${Address.Phone}                            61.8.9216.5000
+    Input Text                              ${Address.Email}                            employer1@mailinator.com
     #Capture Page Screenshot
 
 
@@ -141,7 +145,44 @@ Update correspondence address
     Input Text                              ${Address.City}                             Perth
     Input Text                              ${Address.State}                            Great Southern
     #Input Text                              ${Address.Country}                          Australia
+    Click Element                           ${Address.Country.Select}
+    Click Element                           ${Address.Country.Select.Label}
     Input Text                              ${Address.Zip}                              6000
-    Input Text                              ${Address.Phone}                            +61.8.9216.7000
-    Input Text                              ${Address.Email}                            testemployer2@mailinator.com
+    Input Text                              ${Address.Phone}                            61.8.9216.7000
+    Input Text                              ${Address.Email}                            employer2@mailinator.com
     #Capture Page Screenshot
+
+
+Add Supplier
+    [Arguments]                             ${SuppName}     ${Proj}        ${Loc}       ${Type}     ${Class}        ${ProjL1}   ${ProjL2}   ${ProjL3}       ${cnt}
+    Wait Until Page Contains Element        ${SuppHistory.Add.Supplier.History.Button}
+    Capture Page Screenshot
+    Click Element                           ${SuppHistory.Add.Supplier.History.Button}
+    Wait Until Page Contains Element        ${SuppHistory.Save.Button}
+    Wait Until Page Contains Element        ${SuppHistory.Cancel.Button}
+    Capture Page Screenshot
+    Input Text                              ${SuppHistory.Supplier.Name.Text}                   ${SuppName}
+    Input Text                              ${SuppHistory.Project.Text}                         ${Proj}
+    Input Text                              ${SuppHistory.Location.Text}                        ${Loc}
+    #Input Text                             ${SuppHistory.Country.Text}                         Philippines
+    Click Element                           ${SuppHistory.Country.Select}
+    Click Element                           ${SuppHistory.Country.Select.Label}
+    Click Element                           ${SuppHistory.Sector.Select}
+    Click Element                           ${SuppHistory.Sector.Select.Label}
+    Click Element                           ${SuppHistory.Industry.Select}
+    Click Element                           ${SuppHistory.Industry.Select.Label}
+    Click Element                           ${SuppHistory.Type.Select}
+    Click Element                           ${SuppHistory.Type.Select.Label}
+    Click Element                           ${SuppHistory.Class.Select}
+    Click Element                           ${SuppHistory.Class.Select.Label}
+    Capture Page Screenshot
+    Click Element                           ${SuppHistory.Save.Button}
+    Sleep   2s
+    Wait Until Page Contains Element        ${SuppHistory.Panel}[${cnt}]${SuppHistory.Tag.Type.Label}
+    Wait Until Page Contains Element        ${SuppHistory.Panel}[${cnt}]${SuppHistory.Tag.Class.Label}
+    lib.Ubidy.Text Should Be Equal          ${SuppHistory.Panel}[${cnt}]${SuppHistory.Tag.Type.Label}                       ${Type}
+    lib.Ubidy.Text Should Be Equal          ${SuppHistory.Panel}[${cnt}]${SuppHistory.Tag.Class.Label}                      ${Class}
+    lib.Ubidy.Text Should Be Equal          ${SuppHistory.Panel}[${cnt}]${SuppHistory.Project.Line1}                        ${ProjL1}
+    lib.Ubidy.Text Should Be Equal          ${SuppHistory.Panel}[${cnt}]${SuppHistory.Project.Line2}                        ${ProjL2}
+    lib.Ubidy.Text Should Be Equal          ${SuppHistory.Panel}[${cnt}]${SuppHistory.Project.Line3}                        ${ProjL3}
+    Capture Page Screenshot

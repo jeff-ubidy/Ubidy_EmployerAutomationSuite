@@ -84,14 +84,13 @@ ${Company.Bio.Text}                                     //div[@class="public-Dra
 
 
 
-
-
 #ADDRESS
 ${Address.One}                                          id=address1
 ${Address.Two}                                          id=address2
 ${Address.City}                                         id=city
 ${Address.State}                                        id=state
-${Address.Country}                                      //input[@class="ant-input ant-input ant-select-search__field"]
+${Address.Country.Select}                               //div[@title="Please Select"]
+${Address.Country.Select.Label}                         //li[@class="ant-select-dropdown-menu-item"][text()='Albania']
 ${Address.Zip}                                          id=zip
 ${Address.Phone}                                        id=phone
 ${Address.Email}                                        id=email
@@ -116,10 +115,12 @@ ${Address.Type.Correspondence}                          //li[@class="ant-select-
 #REGIONS
 #${Regions.Region.Select}                               //div[@class="ant-col-md-8"]/div
 ${Regions.Region.Select}                                //div[@title="-- Select Region --"]
+${Regions.Region2.Select}                                //div[@title="North America"]
 ${Regions.Region.Select1.Label}                         //li[@class="ant-select-dropdown-menu-item"][text()='North America']
 ${Regions.Region.Select2.Label}                         //li[@class="ant-select-dropdown-menu-item"][text()='Europe']
 #${Regions.Country.Select}                              //div[@class="ant-col-md-10"]/div
 ${Regions.Country.Select}                               //div[@title="-- Select Country --"]
+${Regions.Country2.Select}                               //div[@title="United States"]
 ${Regions.Country.Select1.Label}                        //li[@class="ant-select-dropdown-menu-item"][text()="United States"]
 ${Regions.Country.Select2.Label}                        //li[@class="ant-select-dropdown-menu-item"][text()="Albania"]
 ${Regions.Add.Region.Button}                            //button[contains(.,'Add Region')]
@@ -134,10 +135,12 @@ ${Regions.Left.Menu.Link}                               //li[@class="ant-menu-it
 #INDUSTRIES
 #${Industries.Sector.Select}                             //div[@class="ant-col-md-8"]/div
 ${Industries.Sector.Select}                             //div[@title="-- Select Sector --"]
+${Industries.Sector2.Select}                             //div[@title="Construction"]
 ${Industries.Sector.Select1.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Construction']
 ${Industries.Sector.Select2.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Manufacturing']
 #${Industries.Industry.Select}                          //div[@class="ant-col-md-10"]/div
 ${Industries.Industry.Select}                           //div[@title="-- Select Industry --"]
+${Industries.Industry2.Select}                           //div[@title="Buildings"]
 ${Industries.Industry.Select1.Label}                    //li[@class="ant-select-dropdown-menu-item"][text()="Buildings"]
 ${Industries.Industry.Select2.Label}                    //li[@class="ant-select-dropdown-menu-item"][text()="Automotive"]
 ${Industries.Add.Industry.Button}                       //button[contains(.,'Add Industry')]
@@ -155,17 +158,20 @@ ${SuppHistory.Add.Supplier.History.Button}              //button[contains(.,'Add
 ${SuppHistory.Supplier.Name.Text}                       id=supplier
 ${SuppHistory.Project.Text}                             id=project
 ${SuppHistory.Location.Text}                            id=location
-${SuppHistory.Country.Text}                             //div[@class="ant-select-search__field__wrap"]/input[@type="text"]
+#${SuppHistory.Country.Text}                             //div[@class="ant-select-search__field__wrap"]/input[@type="text"]
+${SuppHistory.Country.Select}                            //div[@title="-- Please Select --"]
+${SuppHistory.Country.Select.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Algeria']
 ${SuppHistory.Sector.Select}                            //div[@title="-- Select Sector --"]
 ${SuppHistory.Sector.Select.Label}                      //li[@class="ant-select-dropdown-menu-item"][text()='Construction']
 ${SuppHistory.Industry.Select}                          //div[@title="-- Select Industry --"]
 ${SuppHistory.Industry.Select.Label}                    //li[@class="ant-select-dropdown-menu-item"][text()='Buildings']
 ${SuppHistory.Type.Select}                              //div[@title="Perm Placement"]
 ${SuppHistory.Type.Select.Label}                        //li[@class="ant-select-dropdown-menu-item"][text()='Perm Placement']
-${SuppHistory.Class.Select}                             //div[@title="Skilled"]
-${SuppHistory.Class.Select.Label}                       //li[@class="ant-select-dropdown-menu-item"][text()='Skilled']
+${SuppHistory.Class.Select}                             //div[@title="Professional"]
+${SuppHistory.Class.Select.Label}                       //li[@class="ant-select-dropdown-menu-item"][text()='Skilled/Semi-Skilled']
 ${SuppHistory.Save.Button}                              //*[@type="submit"]/span[text()[contains(.,'Save Changes')]]
 ${SuppHistory.Cancel.Button}                            //*[@type="button"]/span[text()[contains(.,'Cancel')]]
+${SuppHistory.Panel}                                    //div[@class="ant-card supplier-history ant-card-bordered"]
 ${SuppHistory.Tag.Type.Label}                           //div[@class="ant-tag ant-tag-has-color"][1]
 ${SuppHistory.Tag.Class.Label}                          //div[@class="ant-tag ant-tag-has-color"][2]
 ${SuppHistory.Project.Line1}                            //div[@class="ant-card-body"]/p[1]
@@ -182,7 +188,7 @@ ${Testimonials.Email.Text}                              id=email
 ${Testimonials.Send.Invitation.Button}                  //*[@type="submit"]/span[text()[contains(.,'Send Invitation')]]
 ${Testimonials.Table.Name}                              //tbody[@class="ant-table-tbody"]/tr/td[1][text()="John Smith"]
 ${Testimonials.Table.Company}                           //tbody[@class="ant-table-tbody"]/tr/td[2][text()="Metal Corporation"]
-${Testimonials.Table.Email}                             //tbody[@class="ant-table-tbody"]/tr/td[3][text()="testemployer@mailinator.com"]
+${Testimonials.Table.Email}                             //tbody[@class="ant-table-tbody"]/tr/td[3][text()="employer@mailinator.com"]
 ${Testimonials.Table.Sent}                              //tbody[@class="ant-table-tbody"]/tr/td[4]
 ${Testimonials.Table.Action}                            //tbody[@class="ant-table-tbody"]/tr/td[5]/span/a[text()="Cancel"]
 

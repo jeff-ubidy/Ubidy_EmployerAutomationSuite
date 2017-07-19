@@ -8,6 +8,6 @@ ${Profile}                      Local
 ${Selenium.Browser.Name}        chrome
 ${Selenium.Browser.Version}     44
 ${Selenium.Timeout}             2.0
-#${DELAY}                        0.0010
-${DELAY}                        0.01
+${DELAY}                        0.0010
+#${DELAY}                        0.01
 #run_on_failure=Capture Page Screenshot
